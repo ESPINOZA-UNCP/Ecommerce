@@ -1,18 +1,195 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{%block title%} <h1>{{title}}</h1>  {% endblock %}
+        <meta name="csrf-token" content="csrf_token()">
 
-{%block content%}    
-    {{register_form.errors}}
-    <form method="post" action="">
-        <h2>REGISTRATE</h2>
-        {% csrf_token %}
-        {% for field in register_form %}
-            <label>{{field.label}}</label>
-            {{field}}
-        {% endfor %}
-        <input type="submit" value="Registrarse" class="btn btn-register"/>
-    </form>
-{% endblock %}
+        <title>Registro</title>
+        {% load static %}
+        <!-- Favicon -->
+        <link href="{% static 'images/brand/favicon.png' %}" rel="icon" type="image/png">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <!-- Extra details for Live View on GitHub Pages -->
 
-<style>
-</style>
+        <!-- Icons -->
+        <link href="{% static 'vendor/nucleo/css/nucleo.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+        <!-- Argon CSS -->
+        <link type="text/css" href="{% static 'css/argon.css' %}" rel="stylesheet">
+    </head>
+    <body class="">
+
+            <form id="logout-form" action="{% url 'logout'%}" method="POST" style="display: none;">
+                {% csrf_token %}
+            </form>
+
+        <div class="main-content">
+        
+            <div class="header bg-gradient-primary py-7 py-lg-4"> 
+                <div class="container">
+                    <div class="header-body text-center mb-7">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 col-md-6">
+                                <h1 class="text-white">Registrate en ALOJA TRAVELS</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator separator-bottom separator-skew zindex-100">
+                    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+                    </svg>
+                </div>
+                
+            </div>
+
+        <div class="container mt--8 pb-5">
+            <!-- Table -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-7">
+                    <div class="card bg-secondary shadow border-0">
+                        <div class="card-header bg-transparent pb-5">
+                            <div class="text-muted text-center mt-2 mb-4"><small>Regístrate con</small></div>
+                            <div class="btn-wrapper text-center">
+                                <a href="#" class="btn btn-neutral btn-icon">
+                                    <span class="btn-inner--icon"><img src="{% static 'images/icons/common/facebook.svg' %}"></span>
+                                    <span class="btn-inner--text">Facebook</span>
+                                </a>
+                                <a href="#" class="btn btn-neutral btn-icon">
+                                    <span class="btn-inner--icon"><img src="{% static 'images/icons/common/google.svg' %}"></span>
+                                    <span class="btn-inner--text">Google</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <div class="text-center text-muted mb-1 mt--5">
+                                <small>O bien</small>
+                            </div>
+                            <form role="form" method="POST" action="{% url 'register' %}">
+                                {% csrf_token %}
+
+                                <div class="form-group {% if register_form.errors.name %} has-danger {% endif %}">
+                                    <div class="input-group input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                        </div>
+                                        <input class="form-control " placeholder="Nombres" type="text" name="name" value="" id="id_name" required autofocus>
+                                    </div>
+                                    {% if register_form.errors.name %}
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ register_form.errors.name }}</strong>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group {% if register_form.errors.lastname %} has-danger {% endif %}">
+                                    <div class="input-group input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                        </div>
+                                        <input class="form-control " placeholder="Apellidos" type="text" name="lastname" value="" id="id_lastname" required autofocus>
+                                    </div>
+                                    {% if register_form.errors.lastname %}
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ register_form.errors.lastname }}</strong>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group {% if register_form.errors.email %} has-danger {% endif %}">
+                                    <div class="input-group input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        <input class="form-control is-invalid" placeholder="Email" type="email" name="email" value="" id="id_lastname" required>
+                                    </div>
+                                    {% if register_form.errors.email %}
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ register_form.errors.email }}</strong>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group {% if register_form.errors.password1 %} has-danger {% endif %}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <input class="form-control is-invalid" placeholder="Contraseña" type="password" name="password1"  id="id_password1" required>
+                                    </div>
+                                    {% if register_form.errors.password1 %}
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ register_form.errors.password1 }}</strong>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group {% if register_form.errors.password2 %} has-danger {% endif %}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Confirmar Contraseña" type="password" name="password2" id="id_password2" required>
+                                    </div>
+                                    {% if register_form.errors.password2 %}
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ register_form.errors.password2 }}</strong>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-12">
+                                        <div class="custom-control custom-control-alternative custom-checkbox">
+                                            <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                                            <label class="custom-control-label" for="customCheckRegister">
+                                                <span class="text-muted">Estoy de acuerdo con la<a href="#!">Política de privacidad</a></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row align-items-center justify-content-xl-between">
+            <div class="col-xl-6">
+                <div class="copyright text-center text-xl-left text-muted">
+                    &copy; {% now "Y" %} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a> &amp;
+                    <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                    <li class="nav-item">
+                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.updivision.com" class="nav-link" target="_blank">Updivision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+
+        <!-- Argon JS -->
+        <script src="{% static 'js/argon.js' %}"></script>
+    </body>
+</html>

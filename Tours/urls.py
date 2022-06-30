@@ -24,7 +24,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('inicio/', views.index, name='index'),
     path('logout/', views.logout_view, name='logout'),
+    path('login/', views.login_view, name='login'),
     path('registro/', views.register_view, name='register'),
+    path('about/',views.about_view, name = 'about'),
+    path('myaccount/',views.myaccount, name = 'myaccount'),
+    path('myaccount/<int:id>',views.edit_view, name ='edit')
+
 
 ]
 if settings.DEBUG:

@@ -1,0 +1,279 @@
+{% extends 'header.html' %}
+{%load static%}
+{% block content%}
+<link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.63,163,150,153,160,162,317,46,1010,504,10004/r20220628180655p1">
+<style>
+    #infoMIA {
+        display: block;
+        margin-top: 180px;
+        margin-left: 400px;
+    }
+</style>
+{% if consulta == 'view' %}
+<div id="infoMIA" class="columns large-9">
+    <div class="content" style="display: block;">
+        <div>
+            <div id="templatePerfilMIA">
+                <p class="title">Datos personales</p>
+                <div id="box-noti-perfil"></div>
+                <div id="box-noti-profile-edit"></div>
+                <div id="app-profile-basic" class="box box-mia atrapapunto-mia">
+                    <div>
+                        <div class="box-head atrapaloFont">Datos básicos</div>
+                        <div class="box-content datos">
+                            <p class="clear">
+                                <span class="left">Tu foto:</span>
+                                <span class="right foto-content">
+                                    <img height="90" width="90"
+                                        src="/common/photo/avatar/2/9/8/2/29822205_1656167108jpg/cubw_60_0.jpg"
+                                        class="profile">
+                                </span>
+                            </p>
+                            <p class="clear"><span class="left">Eres:</span><span class="right"></span></p>
+                            <p class="clear"><span class="left">Nombre:</span><span class="right">{{user.name}}</span>
+                            </p>
+                            <p class="clear"><span class="left">Apellidos:</span><span
+                                    class="right">{{user.lastname}}</span></p>
+                            <p class="clear"><span class="left">Teléfono fijo:</span><span class="right"></span></p>
+                            <p class="clear"><span class="left">Teléfono móvil:</span><span class="right"></span></p>
+                            <p class="clear"><span class="left">Fecha de nacimiento:</span><span class="right">
+                                </span></p>
+                            <div class="boton clear">
+                                <span class="right">
+                                    <a class="app-mode-edit floatl btn large ellipsis js-toggle"
+                                        href="/myaccount/{{user.id}}" title="Editar datos básicos">
+                                        Editar datos básicos
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box-noti-orders-profile-edit"></div>
+                <div id="app-profile-orders" class="box box-mia atrapapunto-mia" style="display: none;">
+                    <div>
+                        <div class="box-head atrapaloFont">Datos adicionales</div>
+                        <div class="box-content datos">
+                            <p class="clear"><span class="left">Nacionalidad:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Provincia:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Población:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Código postal:</span><span class="right">-- </span></p>
+                            <p class="clear"><span class="left">Nº de DNI/CE/PAS:</span><span class="right">--</span>
+                            </p>
+                            <p class="clear"><span class="left">Nº de pasaporte:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Fecha de caducida del pasaporte:</span><span
+                                    class="right"> </span></p>
+                            <div class="boton clear">
+                                <span class="right">
+                                    <a class="app-mode-edit floatl btn large ellipsis js-toggle"
+                                        href="/myaccount/{{user.id}}" title="Editar datos para reserva">Editar datos
+                                        para reserva</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="app-profile-access" class="box box-mia atrapapunto-mia">
+                    <div>
+                        <div id="box-noti-accesos"></div>
+                        <div class="box box-mia">
+                            <div class="box-head atrapaloFont">Datos de acceso</div>
+                            <div class="box-content datos">
+                                <p class="clear">
+                                    <span class="left">Email<span></span>:</span><span
+                                        class="right">{{user.email}}</span>
+                                </p>
+                                <p class="clear"><span class="left">Contraseña:</span><span class="right">******</span>
+                                </p>
+                                <div class="boton clear "><span class="right">
+                                    <a class="floatl btn large ellipsis js-toggle" href="#"
+                                            title="Editar datos acceso">Editar datos acceso</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif%}
+{% if consulta == 'edit' %}
+<div id="infoMIA" class="columns large-9">
+    <div class="content" style="display: block;">
+        <div>
+            <div id="templatePerfilMIA">
+                <p class="title">Datos personales</p>
+                <div id="box-noti-perfil"></div>
+                <div id="box-noti-profile-edit"></div>
+                <div id="app-profile-basic" class="box box-mia atrapapunto-mia">
+                    <div>
+                        <div class="box-head atrapaloFont">Datos básicos</div>
+                        <div class="box-content editar-datos">
+                            <form name="form-editar-datos-basicos">
+                                <div class="label-left input-h33  labels clear">
+                                    <label class="bold">Tu foto:</label>
+                                    <div class="app-avatar clear foto-content">
+                                        <div>
+                                            <img id="avatar" height="90" width="90"
+                                                src="/common/photo/avatar/2/9/8/2/29822205_1656167108jpg/cubw_60_0.jpg"
+                                                class="profile float" >
+                                            <span class="alert js-foto-subida" style="display:none;"><img
+                                                    src="/assets/images/inv.gif" class="s-ma ico-ok" width="30"
+                                                    height="30">Foto subida correctamente</span>
+                                            <span class="alert js-foto-borrada" style="display:none;"><img
+                                                    src="/assets/images/inv.gif" class="s-ma ico-ok" width="30"
+                                                    height="30">Foto borrada correctamente.</span>
+                                            <div class="clear"></div>
+                                            <div id="file-uploader">
+                                                <noscript>
+                                                    <p>Please enable JavaScript to use file uploader.</p>
+                                                    <!-- or put a simple form for upload here -->
+                                                </noscript>
+                                            </div>
+                                            <img src="/images_new/A/miatrapalo/loading.gif"
+                                                class="loader floatl js-foto-spinner"
+                                                style="margin-top:0; display:none;">
+                                            <button type="button" class="js-upload-avatar-button btn">Cambiar
+                                                foto</button>
+                                            <div>
+                                                <p><span class="js-foto-eliminar "><a title="Eliminar foto"
+                                                            href="#">Eliminar foto</a></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label-left input-h33  labels">
+                                    <label class="bold">Eres:</label>
+                                    <div class="clear input-radio">
+                                        <label><input type="radio" name="perfil_sexo" value="H"> Hombre</label>
+                                        <label><input type="radio" name="perfil_sexo" value="M"> Mujer</label>
+                                    </div>
+                                </div>
+                                <div class="input-txt label-left input-h33  labels">
+                                    <label for="perfil_nombre">Nombre:</label>
+                                    <input id="perfil_nombre" class="clear block w34p" type="text" name="perfil_nombre"
+                                        value="Jean Carlos">
+                                    <div class="box-error w43p error-nombre hidden">
+                                    </div>
+                                </div>
+                                <div class="input-txt label-left input-h33  labels">
+                                    <label for="perfil_apellido">Apellidos:</label>
+                                    <input id="perfil_apellido" class="clear block w43p" type="text"
+                                        name="perfil_apellidos" value="Ramos Huamanlazo">
+                                    <div class="box-error w43p error-apellido hidden">
+                                    </div>
+                                </div>
+                                <div class="input-txt label-left input-h33  labels">
+                                    <label for="perfil_telefono">Teléfono fijo:</label>
+                                    <input id="perfil_telefono" class="clear js-telefono block w43p" type="text"
+                                        name="perfil_telf" value="">
+                                    <div class="box-error w43p error-telefono hidden">
+                                    </div>
+                                </div>
+                                <div class="input-txt label-left input-h33  labels">
+                                    <label for="perfil_telefono_movil">Teléfono móvil:</label>
+                                    <input id="perfil_telefono_movil" class="clear js-telefono block w43p" type="text"
+                                        name="perfil_telefono_movil" value="">
+                                    <div class="box-error w43p error-telefono hidden">
+                                    </div>
+                                </div>
+                                <div class="input-txt label-left input-h33  labels">
+                                    <label for="perfil_fecha_nacimiento">Fecha de nacimiento:</label>
+                                    <div class="fecha clear">
+                                        <input id="dia_nacimiento" class="floatl block w35" type="text" placeholder="dd"
+                                            name="dia_nacimiento" maxlength="2" value=""> <span>/</span>
+                                        <input id="mes_nacimiento" class="floatl block w35" type="text" placeholder="mm"
+                                            name="mes_nacimiento" maxlength="2" value=""> <span>/</span>
+                                        <input id="anyo_nacimiento" class="floatl block w48" type="text"
+                                            placeholder="aaaa" name="anyo_nacimiento" maxlength="4" value="">
+                                    </div>
+                                    <div class="box-error w43p error-fecha_nacimiento hidden"></div>
+                                </div>
+                                <div class="boton clear">
+                                    <span class="right">
+                                        <input class="btn floatl large js-save" type="submit" value="Guardar Datos">
+                                        <span class="loadingMIA hidden"><img class="loader floatl"
+                                                src="/images_new/A/miatrapalo/loading.gif"></span>
+                                        <span class="cancelar"><a class="app-cancel" title="Cancelar cambios"
+                                                href="#">Cancelar cambios</a></span>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="box-noti-orders-profile-edit"></div>
+                <div id="app-profile-orders" class="box box-mia atrapapunto-mia" style="display: none;">
+                    <div>
+                        <div class="box-head atrapaloFont">Datos adicionales</div>
+                        <div class="box-content datos">
+
+                            <p class="clear"><span class="left">Nacionalidad:</span><span class="right">--</span></p>
+
+                            <p class="clear"><span class="left">Provincia:</span><span class="right">--</span></p>
+
+                            <p class="clear"><span class="left">Población:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Código postal:</span><span class="right">-- </span></p>
+                            <p class="clear"><span class="left">Nº de DNI/CE/PAS:</span><span class="right">--</span>
+                            </p>
+                            <p class="clear"><span class="left">Nº de pasaporte:</span><span class="right">--</span></p>
+                            <p class="clear"><span class="left">Fecha de caducida del pasaporte:</span><span
+                                    class="right"> </span></p>
+
+
+
+
+
+                            <div class="boton clear"><span class="right"><a
+                                        class="app-mode-edit floatl btn large ellipsis js-toggle" href="#"
+                                        title="Editar datos para reserva">Editar datos para reserva</a></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="app-profile-access" class="box box-mia atrapapunto-mia">
+                    <div>
+                        <div id="box-noti-accesos"></div>
+                        <div class="box box-mia">
+                            <div class="box-head atrapaloFont">Datos de acceso</div>
+                            <div class="box-content editar-datos">
+                                <form name="form-editar-datos"><input type="hidden" name="csrf"
+                                        value="GbGvo5HqUMyb08gZoLsAAUScV3TyNdbrmj6XNzU-_4o">
+                                    <div class="input-txt label-left input-h33  labels clear"><label>Email:</label>
+                                        <div class="clear block w43p sololectura"> carlos_1221fader1@hotmail.com </div>
+                                    </div>
+                                    <div class="input-txt label-left input-h33  labels"> <label
+                                            for="contrasena_actual">Tu contraseña actual:</label> <input
+                                            id="contrasena_actual" class="clear block w24p" type="password"
+                                            placeholder="" name="contrasena_actual" value="">
+                                        <div class="box-error w24p error-password hidden"></div>
+                                    </div>
+                                    <div class="input-txt label-left input-h33  labels"> <label
+                                            for="contrasena_nueva">Tu nueva contraseña:</label> <input
+                                            id="contrasena_nueva" class="clear block w24p" type="password"
+                                            placeholder="" name="contrasena_nueva" value="">
+                                        <div class="box-error w24p error-new_password hidden"></div>
+                                    </div>
+                                    <div class="input-txt label-left input-h33  labels"> <label
+                                            for="contrasena_nueva2">Repite tu nueva contraseña:</label> <input
+                                            id="contrasena_nueva2" class="clear block w24p" type="password"
+                                            placeholder="" name="contrasena_nueva2" value="">
+                                        <div class="box-error w24p error-new_password_repeat hidden"></div>
+                                    </div>
+                                    <div class="boton clear"> <span class="right"> <input
+                                                class="btn floatl large js-save" type="submit" value="Guardar Datos">
+                                            <span id="loading" class="hidden"><img class="loader floatl"
+                                                    src="/images_new/A/miatrapalo/loading.gif"></span> <span
+                                                class="cancelar js-toggle"><a title="Cancelar cambios" href="#">Cancelar
+                                                    cambios</a></span> </span> </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif%}
+{% endblock%}
