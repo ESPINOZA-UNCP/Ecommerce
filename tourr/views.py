@@ -1,6 +1,9 @@
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
 from tourr.form import RegisterForm, UpdateForm
 from validate_email import validate_email
 from django.contrib.auth import get_user_model
@@ -84,20 +87,41 @@ def register_view(request):
             'consulta':'register'
         })
 
-def edit_view(request,id):
-    if request.user.is_authenticated and request.user.id == id:
-        user= Usuario.objects.get(id=id)
-        if request.method == 'GET':
-            update_form = UpdateForm(instance=user)
+@login_required
+def edit_view(request):
+    user= Usuario.objects.get(id=request.user.id)
+    if request.method == 'GET':
+        update_form = UpdateForm(instance=user)
+    else:
+        update_form = UpdateForm(request.POST, instance=user)
+        if update_form.is_valid():
+            update_form.save()
+            messages.success(request, f'Usuario "{request.user.name}" actualizado con exito', extra_tags='alert alert-success')
+            return redirect('/myaccount/')
         else:
-            update_form = UpdateForm(request.POST, instace=user)
-            if update_form.is_valid():
-                update_form.save()
-                messages.success(request, f'Usuario "{request.user.name}" actualizado con exito', extra_tags='alert alert-success')
-                return redirect('/myaccount/')
-            else:
-                messages.error(request, 'Error al actualizar', extra_tags='alert alert-danger')
-        return render(request, 'atrapalo/myaccount.html', {
-            'update_form':update_form,
-            'consulta':'edit'
+            print("Error al actualizar")
+            messages.error(request, 'Error al actualizar', extra_tags='alert alert-danger')
+    return render(request, 'atrapalo/myaccount.html', {
+        'update_form':update_form,
+        'consulta':'edit_datos'
+    })
+@login_required
+def change_password(request):
+    user= Usuario.objects.get(id=request.user.id)
+    if request.method == 'GET':
+        password_form = PasswordChangeForm(request.user)
+    else:
+        password_form = PasswordChangeForm(request.user,request.POST)
+        email = request.POST.get('email')
+        if request.user.email != email:
+            user.email = email
+            user.save()
+        if password_form.is_valid():
+            user = password_form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, f'Contraseña actualizada con exito', extra_tags='alert alert-success')
+            return redirect('/myaccount/')
+    return render(request, 'atrapalo/myaccount.html', {
+            'password_form':password_form,
+            'consulta':'edit_password'
         })

@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.db import models
+from django.core.validators import MaxValueValidator
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 
 # Create your models here.
@@ -33,6 +34,7 @@ class Usuario(AbstractBaseUser):
     name = models.CharField('Nombres', max_length=100, blank=True, null=True)
     lastname = models.CharField('Apellidos', max_length=100, blank=True, null=True)
     email = models.EmailField('Correo Electrónico',max_length=100, unique=True)
+    phone = models.PositiveIntegerField('Telefono Movil',validators=[MaxValueValidator(999999999)], blank=True, null=True)
     email_verified_at = models.DateTimeField(auto_now_add=True)
     created_at =models.DateTimeField(default=datetime.now)
     updated_at =models.DateTimeField(blank=True, null=True)

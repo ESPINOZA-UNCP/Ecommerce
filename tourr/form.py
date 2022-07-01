@@ -31,7 +31,7 @@ class RegisterForm(UserCreationForm):
 class UpdateForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['email', 'name', 'lastname']
+        fields = ['email', 'name', 'lastname','phone']
         # widgets = {
         #     'imagen': forms.FileInput(
                 

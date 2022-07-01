@@ -28,7 +28,8 @@ urlpatterns = [
     path('registro/', views.register_view, name='register'),
     path('about/',views.about_view, name = 'about'),
     path('myaccount/',views.myaccount, name = 'myaccount'),
-    path('myaccount/<int:id>',views.edit_view, name ='edit')
+    path('myaccount/change/personal/',views.edit_view, name ='edit'),
+    path('myaccount/change/password/',views.change_password, name = 'change_password')
 
 
 ]

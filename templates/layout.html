@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{password_form.errors}}
+    <form method="post" action="">
+        <h2>REGISTRATE</h2>
+        {% csrf_token %}
+        {% for field in password_form %}
+            <label>{{field.label}}</label>
+            {{field}}
+        {% endfor %}
+        
+        <input type="submit" value="Actualizar" class="btn btn-register"/>
+    </form>
+</body>
+</html>
