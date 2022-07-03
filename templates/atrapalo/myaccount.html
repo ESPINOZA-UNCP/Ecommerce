@@ -3,15 +3,67 @@
 {% block content%}
 <link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.63,163,150,153,160,162,317,46,1010,504,10004/r20220628180655p1">
 <link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.1010,504,10004/r20220629144440p1">
+<style type="text/css" src="{% static 'assets/css/style.css' %}"></style>
+<link type="text/css" media="all" rel="stylesheet" href="{% static 'assets/css/pages/products/user/profile/mybookings.c1d5995dff9d6e0d1ff858af856d336a.css' %}">
+
 <style>
     #infoMIA {
         display: block;
-        margin-top: 180px;
+        margin-top: -30px;
         margin-left: 400px;
     }
-
-
+    #contentMIA{
+        margin-top: 150px;
+    }
 </style>
+<div id="contentMIA" class="clear row">
+    <div id="menuMIA" class="columns large-3 show-for-large">
+        <div id="navMiAtrapalo-sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
+            <ul id="navMiAtrapalo" item_selected="home">
+                <li data-route="misreservas">
+                    <a title="Mis Reservas" href="/miatrapalo/misreservas" id="menuPerfil" class="js-myprofile-link active">
+                        Mis Reservas
+                    </a>
+                </li>
+                <li data-route="perfil">
+                    <a title="Mi cuenta" href="/myaccount" id="menuPerfil" class="js-myprofile-link">
+                        Mi cuenta
+                    </a>
+                </li>
+                <li data-route="miagenda">
+                    <a title="Datos para las reservas" href="/miatrapalo/miscontactos" id="menuAgenda" class="js-myprofile-link">
+                        Datos para las reservas
+                    </a>
+                </li>
+                <li data-route="tarjetas">
+                    <a id="menuTarjetas" title="Mis tarjetas" href="/miatrapalo/#tarjetas" class="js-myprofile-link">
+                        Mis tarjetas
+                    </a>
+                </li>
+                <li data-route="pointsProgram" class="featured">
+                    <a id="menuPointsProgram" title="Atrapapuntos" href="/miatrapalo/#programa-puntos" class="js-myprofile-link">
+                        Atrapapuntos
+                    </a>
+                </li>
+                <li data-route="home">
+                    <a title="Mi perfil" href="/miatrapalo/#home" id="menuHome" class="js-myprofile-link">
+                        Opiniones y favoritos
+                    </a>
+                </li>
+                <li data-route="newsletter">
+                    <a class="js-myprofile-link" title="Suscripción a newsletter" id="menuNewsletter" href="/miatrapalo/#newsletter">
+                        Suscripción a newsletter
+                    </a>
+                </li>
+                <li data-route="pointExitSession">
+                    <a id="menuExitSession" title="Cerrar sesión" href="/miatrapalo/#logout" class="js-logout-mia inter">
+                        ¿No eres Jean Carlos?<span style="display: block">Cerrar sesión </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% if consulta == 'view' %}
 
 <div id="infoMIA" class="columns large-9">
@@ -278,15 +330,18 @@
                                     <div class="input-txt nput-h33  datos"> 
                                         <p class="clear"> 
                                             <span class="left">
-                                            <label for="contrasena_actual">Tu contraseña actual:</label> 
-                                            <span class="right">
-                                            <input id="id_old_password" type="password"
-                                            placeholder="" name="old_password" value="">
-                                        </span>
-                                        </p>
-                                        <div class="box-error w24p error-password hidden"></div>
-                                    </div>
-                                    <div class="input-txt nput-h33  datos"> 
+                                                <label for="contrasena_actual">Tu contraseña actual:</label> 
+                                                <span class="right">
+                                                    <input id="id_old_password" type="password"
+                                                    placeholder="" name="old_password" value="">
+                                                </span>
+                                            </p>
+                                            <div class="box-error w24p error-password hidden"></div>
+                                            {% if password_form.errors.old_password%}
+                                                {{password_form.errors.old_password}}
+                                            {%endif%}
+                                        </div>
+                                        <div class="input-txt nput-h33  datos"> 
                                         <p class="clear"> 
                                             <span class="left">
                                                 <label
@@ -307,13 +362,14 @@
                                         <label
                                             for="contrasena_nueva2">Repite la contraseña:</label>  
                                             <span class="right">
-
+                                                
                                             <input
                                             id="id_new_password2" type="password"
                                             placeholder="" name="new_password2" value="">     
                                         </span>
                                         </p>
                                     </div>
+                                    {{password_form.errors.new_password2}}
 
           
                                     <div class="clear datos"> 

@@ -1,21 +1,50 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {{password_form.errors}}
-    <form method="post" action="">
-        <h2>REGISTRATE</h2>
-        {% csrf_token %}
-        {% for field in password_form %}
-            <label>{{field.label}}</label>
-            {{field}}
-        {% endfor %}
-        
-        <input type="submit" value="Actualizar" class="btn btn-register"/>
-    </form>
-</body>
-</html>
+<style type="text/css" src="/assets/css/style.css"></style>
+<link type="text/css" media="all" rel="stylesheet" href="/assets/css/pages/products/user/profile/mybookings.c1d5995dff9d6e0d1ff858af856d336a.css">
+<div id="contentMIA" class="clear row">
+    <div id="menuMIA" class="columns large-3 show-for-large">
+        <div id="navMiAtrapalo-sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
+            <ul id="navMiAtrapalo" item_selected="home">
+                <li data-route="misreservas">
+                    <a title="Mis Reservas" href="/miatrapalo/misreservas" id="menuPerfil" class="js-myprofile-link active">
+                        Mis Reservas
+                    </a>
+                </li>
+                <li data-route="perfil">
+                    <a title="Mi cuenta" href="/miatrapalo/#perfil" id="menuPerfil" class="js-myprofile-link">
+                        Mi cuenta
+                    </a>
+                </li>
+                <li data-route="miagenda">
+                    <a title="Datos para las reservas" href="/miatrapalo/miscontactos" id="menuAgenda" class="js-myprofile-link">
+                        Datos para las reservas
+                    </a>
+                </li>
+                <li data-route="tarjetas">
+                    <a id="menuTarjetas" title="Mis tarjetas" href="/miatrapalo/#tarjetas" class="js-myprofile-link">
+                        Mis tarjetas
+                    </a>
+                </li>
+                <li data-route="pointsProgram" class="featured">
+                    <a id="menuPointsProgram" title="Atrapapuntos" href="/miatrapalo/#programa-puntos" class="js-myprofile-link">
+                        Atrapapuntos
+                    </a>
+                </li>
+                <li data-route="home">
+                    <a title="Mi perfil" href="/miatrapalo/#home" id="menuHome" class="js-myprofile-link">
+                        Opiniones y favoritos
+                    </a>
+                </li>
+                <li data-route="newsletter">
+                    <a class="js-myprofile-link" title="Suscripción a newsletter" id="menuNewsletter" href="/miatrapalo/#newsletter">
+                        Suscripción a newsletter
+                    </a>
+                </li>
+                <li data-route="pointExitSession">
+                    <a id="menuExitSession" title="Cerrar sesión" href="/miatrapalo/#logout" class="js-logout-mia inter">
+                        ¿No eres Jean Carlos?<span style="display: block">Cerrar sesión </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
