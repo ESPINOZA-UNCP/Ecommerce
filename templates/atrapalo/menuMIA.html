@@ -1,0 +1,61 @@
+<style>
+    #infoMIA {
+        display: block;
+        margin-top: -30px;
+        margin-left: 400px;
+    }
+    #contentMIA{
+        margin-top: 150px;
+    }
+</style>
+<div id="contentMIA" class="clear row">
+    <div id="menuMIA" class="columns large-3 show-for-large">
+        <div id="navMiAtrapalo-sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
+            <ul id="navMiAtrapalo" item_selected="home">
+                <li data-route="misreservas">
+                    <a title="Mis Reservas" href="#" id="menuPerfil" class="js-myprofile-link {% if request.get_full_path == '/reservas/' %}active{% endif %}">
+                        Mis Reservas
+                    </a>
+                </li>
+                <li data-route="perfil">
+                    <a title="Mi cuenta" href="/myaccount" id="menuPerfil" class="js-myprofile-link 
+                    {% if request.get_full_path == '/myaccount/' %}active{% endif %}
+                    {% if request.get_full_path == '/myaccount/change/personal/' %}active{% endif %}
+                    {% if request.get_full_path == '/myaccount/change/password/' %}active{% endif %}">
+                        Mi cuenta
+                    </a>
+                </li>
+                <li data-route="miagenda">
+                    <a title="Datos para las reservas" href="#" id="menuAgenda" class="js-myprofile-link">
+                        Datos para las reservas
+                    </a>
+                </li>
+                <li data-route="tarjetas">
+                    <a id="menuTarjetas" title="Mis tarjetas" href="/tarjetas" class="js-myprofile-link {% if request.get_full_path == '/tarjetas/' %}active{% endif %}">
+                        Mis tarjetas
+                    </a>
+                </li>
+                <li data-route="pointsProgram" class="featured">
+                    <a id="menuPointsProgram" title="Atrapapuntos" href="/alojapuntos" class="js-myprofile-link {% if request.get_full_path == '/alojapuntos/' %}active{% endif %}">
+                        AlojaPuntos
+                    </a>
+                </li>
+                <li data-route="home">
+                    <a title="Mi perfil" href="#" id="menuHome" class="js-myprofile-link">
+                        Opiniones y favoritos
+                    </a>
+                </li>
+                <li data-route="newsletter">
+                    <a class="js-myprofile-link {% if request.get_full_path == '/suscripcion/' %}active{% endif %}" title="Suscripción a newsletter" id="menuNewsletter" href="/suscripcion">
+                        Suscripción a Aloja
+                    </a>
+                </li>
+                <li data-route="pointExitSession">
+                    <a id="menuExitSession" title="Cerrar sesión" href="/logout" class="js-logout-mia inter">
+                        ¿No eres {{user.name}}?<span style="display: block">Cerrar sesión </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

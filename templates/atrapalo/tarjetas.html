@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{%load static%}
+{% block content%}
+<link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.63,163,150,153,160,162,317,46,1010,504,10004/r20220628180655p1">
+<link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.1010,504,10004/r20220629144440p1">
+<style type="text/css" src="{% static 'assets/css/style.css' %}"></style>
+<link type="text/css" media="all" rel="stylesheet" href="{% static 'assets/css/pages/products/user/profile/mybookings.c1d5995dff9d6e0d1ff858af856d336a.css' %}">
+
+{% include 'atrapalo/menuMIA.html' %}
+<div id="infoMIA" class="columns large-9">
+    <div class="content" style="display: block;">
+        <div>
+            <p class="title floatl">Formas de pago</p>
+            <div class="pago-seguro atrapaloFont">
+                <i class="icon-candado floatr marginleft5 1"></i>Pago 100% <span>Seguro</span>
+            </div>
+            <div class="clear"></div>
+            <div class="box box-mia atrapapunto-mia">
+                <div class="box-head atrapaloFont">Mis tarjetas</div>
+                <div class="box-content info-tarjetas clear">
+                    <p>Todavía no tienes ninguna tarjeta de crédito/débito.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

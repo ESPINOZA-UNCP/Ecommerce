@@ -29,7 +29,10 @@ urlpatterns = [
     path('about/',views.about_view, name = 'about'),
     path('myaccount/',views.myaccount, name = 'myaccount'),
     path('myaccount/change/personal/',views.edit_view, name ='edit'),
-    path('myaccount/change/password/',views.change_password, name = 'change_password')
+    path('myaccount/change/password/',views.change_password, name = 'change_password'),
+    path('alojapuntos/',views.puntos_view, name ='aloja_puntos'),
+    path('suscripcion/',views.suscripcion_view, name = 'suscripcion'),
+    path('tarjetas/',views.tarjetas_view, name = 'tarjetas'),
 
 
 ]

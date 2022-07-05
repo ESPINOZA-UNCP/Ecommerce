@@ -1,0 +1,80 @@
+{% extends 'header.html' %}
+{%load static%}
+{% block content%}
+<link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.63,163,150,153,160,162,317,46,1010,504,10004/r20220628180655p1">
+<!-- <link type="text/css" media="screen" rel="stylesheet" href="https://cdn.atrapalo.com/common/csst/fs.1010,504,10004/r20220629144440p1"> -->
+<!-- <style type="text/css" src="{% static 'assets/css/style.css' %}"></style> -->
+<link type="text/css" media="all" rel="stylesheet" href="{% static 'assets/css/pages/products/user/profile/mybookings.c1d5995dff9d6e0d1ff858af856d336a.css' %}">
+
+{% include 'atrapalo/menuMIA.html' %}
+<div id="infoMIA" class="columns large-9">
+    <div class="content" style="display: block;">
+        <div><p class="title">Suscripción a Travelix</p>
+            <!-- <div class="message-box feedback-ok marginbot10 hidden">
+                <i class="fa fa-check-circle box-icon "></i>
+                <p>Tus cambios han sido guardados</p>
+                <i class="icon-close_l js-close-box close-box"></i>
+            </div> -->
+            <div class="listh box-head atrapaloFont location-title">¡Apúntate!</div>
+            <div id="box-newsletter" class="box-newsletter box-news2">
+                <div class="clear">
+                    <div class="province">
+                        <div>
+                            <div class="row paddingbot20">
+                                <div class="columns">
+                                    <div class="label-email">
+                                        <label>Email:</label>
+                                        <p>{{user.email}}</p>
+                                    </div>
+                                    <div class="label-provincia ">
+                                        <label for="provincia">Provincia:</label>
+                                        <select id="provincia" class="app-location-selector custom-select">
+                                            <option id="select-provincia" value="">Seleccione una Provincia</option>
+                                            <option value="18">Amazonas</option>
+                                            <option value="11">Ancash</option>
+                                            <option value="19">Apurimac</option>
+                                            <option value="3">Arequipa</option>
+                                            <option value="16">Ayacucho</option>
+                                            <option value="9">Cajamarca</option>
+                                            <option value="20">Callao</option>
+                                            <option value="27">Cañete</option>
+                                            <option value="2">Cusco</option>
+                                            <option value="21">Huancavelica</option>
+                                            <option value="22">Huánuco</option>
+                                            <option value="10">Ica</option>
+                                            <option value="23">Junín</option>
+                                            <option value="8">La Libertad</option>
+                                            <option value="6">Lambayeque</option>
+                                            <option value="1">Lima</option>
+                                            <option value="12">Loreto</option>
+                                            <option value="5">Machu Picchu</option>
+                                            <option value="14">Madre de Dios</option>
+                                            <option value="24">Moquegua</option>
+                                            <option value="25">Pasco</option>
+                                            <option value="13">Piura</option>
+                                            <option value="4">Puno</option>
+                                            <option value="15">San Martin</option>
+                                            <option value="7">Tacna</option>
+                                            <option value="17">Tumbes</option>
+                                            <option value="26">Ucayali</option>    
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="columns medium-4 small-centered">
+                                    <button class="app-suscribe-button btn" style="display: inline-block;">Subscríbeme</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="newsletterSuscripcionMIA" class="hidden">
+                <div class="listh box-head atrapaloFont">Frecuencia</div>
+                <div class="frequencies"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

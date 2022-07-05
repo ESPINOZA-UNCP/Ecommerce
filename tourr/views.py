@@ -10,10 +10,24 @@ from django.contrib.auth import get_user_model
 from .models import *
 
 # Create your views here.
-
+def tarjetas_view(request):
+    return render(request, 'atrapalo/tarjetas.html',{
+        'title': 'Tarjetas',
+        'link':'atrapalo/tarjetas',
+    })
+def suscripcion_view(request):
+    return render(request, 'atrapalo/suscripcion.html',{
+        'title': 'Suscripcion',
+        'link':'atrapalo/suscripcion',
+    })
+def puntos_view(request):
+    return render(request, 'atrapalo/puntos.html',{
+        'link':'atrapalo/puntos',
+    })
 def myaccount(request):
     return render(request,'atrapalo/myaccount.html',{
         'consulta':'view',
+        'link':'atrapalo/myaccount',
     })
 
 def index(request):
@@ -38,8 +52,7 @@ def login_view(request):
             email = request.POST.get('email')
             password = request.POST.get('password')
             old_email = email
-            email_valid = validate_email(email_address=email,
-            check_format=True)
+            email_valid = validate_email(email_address=email,check_format=True)
             if email_valid == False:
                 err_email = "Ingrese un Email valido"
             else:
@@ -75,7 +88,13 @@ def register_view(request):
 
         if request.method == 'POST':
             register_form = RegisterForm(request.POST)
-
+            email = register_form.cleaned_data['email']
+            email_valid = validate_email(email_address=email,check_format=True)
+            if email_valid == False:
+                err_email = "Ingrese un Email valido"
+                register_form.is_valid() == False
+            else:
+                err_email = ""
             if register_form.is_valid():
                 register_form.save()
                 username = register_form.cleaned_data['name']
@@ -103,7 +122,8 @@ def edit_view(request):
             messages.error(request, 'Error al actualizar', extra_tags='alert alert-danger')
     return render(request, 'atrapalo/myaccount.html', {
         'update_form':update_form,
-        'consulta':'edit_datos'
+        'consulta':'edit_datos',
+        'link':'atrapalo/myaccount',
     })
 @login_required
 def change_password(request):
@@ -123,5 +143,6 @@ def change_password(request):
             return redirect('/myaccount/')
     return render(request, 'atrapalo/myaccount.html', {
             'password_form':password_form,
-            'consulta':'edit_password'
+            'consulta':'edit_password',
+            'link':'atrapalo/myaccount',
         })

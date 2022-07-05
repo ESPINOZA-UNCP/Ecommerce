@@ -6,64 +6,7 @@
 <style type="text/css" src="{% static 'assets/css/style.css' %}"></style>
 <link type="text/css" media="all" rel="stylesheet" href="{% static 'assets/css/pages/products/user/profile/mybookings.c1d5995dff9d6e0d1ff858af856d336a.css' %}">
 
-<style>
-    #infoMIA {
-        display: block;
-        margin-top: -30px;
-        margin-left: 400px;
-    }
-    #contentMIA{
-        margin-top: 150px;
-    }
-</style>
-<div id="contentMIA" class="clear row">
-    <div id="menuMIA" class="columns large-3 show-for-large">
-        <div id="navMiAtrapalo-sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
-            <ul id="navMiAtrapalo" item_selected="home">
-                <li data-route="misreservas">
-                    <a title="Mis Reservas" href="/miatrapalo/misreservas" id="menuPerfil" class="js-myprofile-link active">
-                        Mis Reservas
-                    </a>
-                </li>
-                <li data-route="perfil">
-                    <a title="Mi cuenta" href="/myaccount" id="menuPerfil" class="js-myprofile-link">
-                        Mi cuenta
-                    </a>
-                </li>
-                <li data-route="miagenda">
-                    <a title="Datos para las reservas" href="/miatrapalo/miscontactos" id="menuAgenda" class="js-myprofile-link">
-                        Datos para las reservas
-                    </a>
-                </li>
-                <li data-route="tarjetas">
-                    <a id="menuTarjetas" title="Mis tarjetas" href="/miatrapalo/#tarjetas" class="js-myprofile-link">
-                        Mis tarjetas
-                    </a>
-                </li>
-                <li data-route="pointsProgram" class="featured">
-                    <a id="menuPointsProgram" title="Atrapapuntos" href="/miatrapalo/#programa-puntos" class="js-myprofile-link">
-                        Atrapapuntos
-                    </a>
-                </li>
-                <li data-route="home">
-                    <a title="Mi perfil" href="/miatrapalo/#home" id="menuHome" class="js-myprofile-link">
-                        Opiniones y favoritos
-                    </a>
-                </li>
-                <li data-route="newsletter">
-                    <a class="js-myprofile-link" title="Suscripción a newsletter" id="menuNewsletter" href="/miatrapalo/#newsletter">
-                        Suscripción a newsletter
-                    </a>
-                </li>
-                <li data-route="pointExitSession">
-                    <a id="menuExitSession" title="Cerrar sesión" href="/miatrapalo/#logout" class="js-logout-mia inter">
-                        ¿No eres Jean Carlos?<span style="display: block">Cerrar sesión </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% include 'atrapalo/menuMIA.html' %}
 {% if consulta == 'view' %}
 
 <div id="infoMIA" class="columns large-9">
@@ -81,14 +24,13 @@
                                 <span class="left">Tu foto:</span>
                                 <span class="right foto-content">
                                     <img height="90" width="90"
-                                        src=""
-                                        class="profile">
+                                    src="https:/as1.ftcdn.net/v2/jpg/03/39/45/96/1000_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg"
+                                    class="profile"/>
                                 </span>
                             </p>
                             <p class="clear"><span class="left">Nombre:</span><span class="right">{{user.name}}</span>
                             </p>
-                            <p class="clear"><span class="left">Apellidos:</span><span
-                                    class="right">{{user.lastname}}</span></p>
+                            <p class="clear"><span class="left">Apellidos:</span><span class="right">{{user.lastname}}</span></p>
                             <p class="clear"><span class="left">Teléfono móvil:</span><span class="right">{{user.phone}}</span></p>
                             <div class="boton clear">
                                 <span class="right">
@@ -171,10 +113,9 @@
                                     <label class="bold">Tu foto:</label>
                                     <span class="right">
                                         <div class="foto-content">
-                                        
-                                            <img id="avatar" height="90" width="90"
-                                                src=""
-                                                class="profile float" >
+                                            <img height="90" width="90"
+                                                src="https:/as1.ftcdn.net/v2/jpg/03/39/45/96/1000_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg"
+                                                class="profile"/>
                                             <!-- <span class="alert js-foto-subida" style="display:none;"><img
                                                     src="" class="s-ma ico-ok" width="30"
                                                     height="30">Foto subida correctamente</span>
@@ -218,19 +159,21 @@
                                             <label for="perfil_apellido" >Apellidos:</label>
                                             <span class="right">
                                                 <input id="id_lastname"  style="text-align:center;" type="text"
-                                                name="lastname" value="{{user.lastname}}"></span>
-          
+                                                name="lastname" value="{{user.lastname}}">
+                                            </span>
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="input-txt  input-h33  datos">
                                     <p class="clear"> 
-                                    <span class="left">
-                                        <label for="perfil_telefono_movil" >Teléfono móvil:</label>
-                                        <span class="right">
-                                            <input id="id_phone" style="text-align:center;" min="0" max="999999999" type="number" 
-                                            name="phone" value="{{user.phone}}"></span>
-                                        </p>
-                     
+                                        <span class="left">
+                                            <label for="perfil_telefono_movil" >Teléfono móvil:</label>
+                                            <span class="right">
+                                                <input id="id_phone" style="text-align:center;" min="0" max="999999999" type="text" 
+                                                name="phone" value="{{user.phone}}">
+                                            </span>
+                                        </span>
+                                    </p>
                                 </div>
                                 <div class=" clear datos">
                                     <span class="left">
@@ -288,8 +231,8 @@
                                 <span class="left">Tu foto:</span>
                                 <span class="right foto-content">
                                     <img height="90" width="90"
-                                        src=""
-                                        class="profile">
+                                        src="https:/as1.ftcdn.net/v2/jpg/03/39/45/96/1000_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg"
+                                        class="profile"/>
                                 </span>
                             </p>
                             <p class="clear"><span class="left">Nombre:</span><span class="right">{{user.name}}</span>

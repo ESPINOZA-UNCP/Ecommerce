@@ -42,7 +42,11 @@
                             </div>
                             {% if user.email %}
                             <div class="user_box ml-auto">
+                                {% if user.usuario_administrador %}
+                                <div class="user_box_login user_box_link"><a href="/admin">Panel Admin</a></div>
+                                {% else %} 
                                 <div class="user_box_login user_box_link"><a href="/myaccount">Mi cuenta</a></div>
+                                {% endif %}
                                 <div class="user_box_register user_box_link"><a href="/logout">Cerrar Sesión</a></div>
                             </div>
                             {% else %}
