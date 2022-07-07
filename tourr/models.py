@@ -113,6 +113,10 @@ class Viajes(models.Model):
     nombre = models.CharField(max_length=255)
     descripcion = models.TextField()
     costo = models.PositiveIntegerField()
+    imagen = models.ImageField(upload_to='viajes', blank=False, null=False)
+
+    def __str__(self):
+        return self.nombre
 
     class Meta:
         managed = True
