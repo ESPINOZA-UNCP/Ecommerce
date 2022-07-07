@@ -10,6 +10,19 @@ from django.contrib.auth import get_user_model
 from .models import *
 
 # Create your views here.
+def offers_view(request):
+    viajes = Viajes.objects.all()
+    contexto = {'viajes': viajes}
+    return render(request, 'offers.html', contexto)
+
+def contact_view(request):
+    return render(request, 'contact.html',{
+        'title': 'Contact',
+    })
+def blog_view(request):
+    return render(request, 'blog.html',{
+        'title': 'Blog',
+    })
 def tarjetas_view(request):
     return render(request, 'atrapalo/tarjetas.html',{
         'title': 'Tarjetas',
@@ -88,13 +101,13 @@ def register_view(request):
 
         if request.method == 'POST':
             register_form = RegisterForm(request.POST)
-            email = register_form.cleaned_data['email']
-            email_valid = validate_email(email_address=email,check_format=True)
-            if email_valid == False:
-                err_email = "Ingrese un Email valido"
-                register_form.is_valid() == False
-            else:
-                err_email = ""
+            # email = request.POST.get('email')
+            # email_valid = validate_email(email_address=email,check_format=True)
+            # if email_valid == False:
+            #     err_email = "Ingrese un Email valido"
+            #     register_form.is_valid() == False
+            # else:
+            #     err_email = ""
             if register_form.is_valid():
                 register_form.save()
                 username = register_form.cleaned_data['name']

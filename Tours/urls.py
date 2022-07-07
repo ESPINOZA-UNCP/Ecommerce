@@ -33,6 +33,9 @@ urlpatterns = [
     path('alojapuntos/',views.puntos_view, name ='aloja_puntos'),
     path('suscripcion/',views.suscripcion_view, name = 'suscripcion'),
     path('tarjetas/',views.tarjetas_view, name = 'tarjetas'),
+    path('contact/',views.contact_view, name = 'contact'),
+    path('blog/',views.blog_view, name = 'blog'),
+    path('offers/',views.offers_view, name = 'offers'),
 
 
 ]

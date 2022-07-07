@@ -44,7 +44,11 @@
 						</div>
 						{% if user.email %}
 						<div class="user_box ml-auto">
-							<div class="user_box_login user_box_link"><a href="/myaccount">Mi cuenta</a></div>
+							{% if user.usuario_administrador %}
+                                <div class="user_box_login user_box_link"><a href="/admin">Panel Admin</a></div>
+							{% else %}
+								<div class="user_box_login user_box_link"><a href="/myaccount">Mi cuenta</a></div>
+							{% endif %}
 							<div class="user_box_register user_box_link"><a href="/logout">Cerrar Sesión</a></div>
 						</div>
 						{% else %}
@@ -71,9 +75,9 @@
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="/inicio">inicio</a></li>
 								<li class="main_nav_item"><a href="#">nosotros</a></li>
-								<li class="main_nav_item"><a href="/t_offers">viajes</a></li>
-								<li class="main_nav_item"><a href="/t_blog">noticias</a></li>
-								<li class="main_nav_item"><a href="/t_contact">contáctanos</a></li>
+								<li class="main_nav_item"><a href="/offers">viajes</a></li>
+								<li class="main_nav_item"><a href="/blog">noticias</a></li>
+								<li class="main_nav_item"><a href="/contact">contáctanos</a></li>
 							</ul>
 						</div>
 						<div class="content_search ml-lg-0 ml-auto">

@@ -107,3 +107,13 @@ class FailedJobs(models.Model):
     class Meta:
         managed = True
         db_table = 'failed_jobs'
+
+class Viajes(models.Model):
+    id = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=255)
+    descripcion = models.TextField()
+    costo = models.PositiveIntegerField()
+
+    class Meta:
+        managed = True
+        db_table = 'viajes'
