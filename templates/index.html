@@ -1,6 +1,10 @@
 {% extends 'header.html' %}
 {%load static%}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+<link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}">
+<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
 	<div class="home">
 		
 		<!-- Home Slider -->
@@ -20,7 +24,7 @@
 							<h1>VIVE</h1>
 							<h1>el placer de viajar</h1>
 							<div class="button home_slider_button">
-								<div class="button_bcg"></div><a href="#">descubre
+								<div class="button_bcg"></div><a href="/offers">descubre
 									planes<span></span><span></span><span></span></a>
 							</div>
 						</div>
@@ -33,9 +37,10 @@
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>descubre</h1>
+							<h1>DESCUBRE</h1>
 							<h1>destinos únicos</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">descubre planes<span></span><span></span><span></span></a></div>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="/offers">descubre 
+								planes<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
@@ -46,9 +51,9 @@
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>sueñalo</h1>
+							<h1>SUEÑALO</h1>
 							<h1>visítalo</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">descubre planes<span></span><span></span><span></span></a></div>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="/offers">descubre planes<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
@@ -59,9 +64,9 @@
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>comparte</h1>
+							<h1>COMPARTE</h1>
 							<h1>nuevas aventuras</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">descubre planes<span></span><span></span><span></span></a></div>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="/offers">descubre planes<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
@@ -413,7 +418,7 @@
 									<option>03</option>
 								</select>
 							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							<button class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 						</form>
 					</div>
 				</div>
@@ -527,7 +532,7 @@
 	<!-- CTA -->
 
 	<div class="cta">
-		<div class="cta_background" style="background-image:url({% static 'images/cta.jpg' %})"></div>
+		<div class="cta_background" style="background-image:url({% static 'images/tours.png' %})"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -546,19 +551,20 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-									eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus
-									mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-									augue gravida lectus, et efficitur enim justo vel ligula.</p>
+								<p class="cta_text">El destido ideal para celebrar Semana Santa en Perú, es sin duda
+									alguna Ayacucho.Caracterizado por su fervor religioso, sus coloridas alfombras y
+									su masiva procesión de Viernes Santo. Por ello, miles de turistas aprovecharán
+									este feriado largo, para visitar Ayacucho, pues destaca por su fiesta religiosa,
+									turismo, gastronomía, artesanía, entre otros.</p>
 								<div class="button cta_button">
-									<div class="button_bcg"></div><a href="#">book
-										now<span></span><span></span><span></span></a>
+									<div class="button_bcg"></div><a href="#">RESERVAR
+										AHORA<span></span><span></span><span></span></a>
 								</div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">Tours Fiestas Patrias</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -566,19 +572,20 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-									eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus
-									mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-									augue gravida lectus, et efficitur enim justo vel ligula.</p>
+								<p class="cta_text">¿Ya sabes que hacer en los feriados de Fiestas Patrias 2022? Si
+									aun no tienes planes, te invitamos a conocer los Paquetes Fiestas Patrias 2022
+									que Aloja Travels ha preparado para ti.
+									Conoce el Peru: Cusco, Ayacucho, Punta Sal, Mancora, Vichayito, Zorritos,
+									Chiclayo, Trujillo, Oxapampa, Selva Central, Arequipa y muchos destinos más.</p>
 								<div class="button cta_button">
-									<div class="button_bcg"></div><a href="#">book
-										now<span></span><span></span><span></span></a>
+									<div class="button_bcg"></div><a href="#">RESERVAR
+										AHORA<span></span><span></span><span></span></a>
 								</div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">Tours Feriados Largos</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -586,13 +593,13 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-									eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus
-									mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-									augue gravida lectus, et efficitur enim justo vel ligula.</p>
+								<p class="cta_text">Los feriasos largos
+									son la mejor excusa para planificar un viaje con familia o amigos, por ello
+									Aloja Travels tiene las mejores ofertas de tours para vivie experiencias
+									inolvidables.</p>
 								<div class="button cta_button">
-									<div class="button_bcg"></div><a href="#">book
-										now<span></span><span></span><span></span></a>
+									<div class="button_bcg"></div><a href="#">RESERVAR
+										AHORA<span></span><span></span><span></span></a>
 								</div>
 							</div>
 
@@ -645,6 +652,123 @@
 		</div>
 
 	</div>
+	<!-- Viajes -->
+	<div class="section section-3" data-aos="fade-up" data-aos-delay="100">
+		<div class="container">
+			<div class="row align-items-center justify-content-between  mb-5">
+				<div class="col-lg-5" data-aos="fade-up">
+					<h2 class="heading mb-3">Viaja por el Perú desde s/. 89.99</h2>
+					<p>Ofertas de lugares turísticos nacionales.</p>
+				</div>
+				<div class="col-lg-5 text-md-end" data-aos="fade-up" data-aos-delay="100">
+					<div id="destination-controls">
+						<span class="prev me-3" data-controls="prev">
+							<span class="icon-chevron-left"></span>
+						</span>
+						<span class="next" data-controls="next">
+							<span class="icon-chevron-right"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="destination-slider-wrap">
+			<div class="destination-slider">
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/millpu.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 430</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Millpu</a></h3>
+						<span class="meta">Ayacucho, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/pampadequinua.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 560</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Pampa de Quinua</a></h3>
+						<span class="meta">Ayacucho, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/wari.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 490</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Wari</a></h3>
+						<span class="meta">Ayacucho, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/oxapampa.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 490</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Oxapampa</a></h3>
+						<span class="meta">Oxapampa, Perú</span>
+					</div>
+				</div>
+
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/oxapampa1.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 430</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Oxapampa</a></h3>
+						<span class="meta">Oxapampa, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/pozuzo.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 560</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Pozuzo</a></h3>
+						<span class="meta">Puzuzo, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/huacachina.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 490</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Huacachina</a></h3>
+						<span class="meta">Ica, Perú</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="{% static 'images/huacachina2.jpg' %}" alt="Image" class="img-fluid">
+						<div class="price">s/. 490</div>
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Huacachina</a></h3>
+						<span class="meta">Ica, Perú</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 
 	<!-- Offers -->
 
@@ -652,7 +776,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">the best offers with rooms</h2>
+					<h2 class="section_title">LOS MEJORES TOURS</h2>
 				</div>
 			</div>
 			<div class="row offers_items">
@@ -665,13 +789,13 @@
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@kensuarez -->
 									<div class="offers_image_background"
-										style="background-image:url({% static 'images/offer_1.jpg' %})"></div>
-									<div class="offer_name"><a href="#">grand castle</a></div>
+										style="background-image:url({% static 'images/viaje1.jpg' %})"></div>
+									<div class="offer_name"><a href="#">Catarata Tigre</a></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$70<span>per night</span></div>
+									<div class="offers_price">s/. 70<span></span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -679,8 +803,7 @@
 										<i></i>
 										<i></i>
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">Lorem ipsum</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
@@ -690,7 +813,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="/offers">read more</a></div>
+									<div class="offers_link"><a href="/offers">ver más</a></div>
 								</div>
 							</div>
 						</div>
@@ -705,13 +828,13 @@
 								<div class="offers_image_container">
 									<!-- Image by Egzon Bytyqi -->
 									<div class="offers_image_background"
-										style="background-image:url({% static 'images/offer_2.jpg' %})"></div>
-									<div class="offer_name"><a href="#">turkey hills</a></div>
+										style="background-image:url({% static 'images/viaje2.jpg' %})"></div>
+									<div class="offer_name"><a href="#">Huacachina</a></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$50<span>per night</span></div>
+									<div class="offers_price">s/. 50<span></span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -730,7 +853,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="/offers">read more</a></div>
+									<div class="offers_link"><a href="/offers">ver más</a></div>
 								</div>
 							</div>
 						</div>
@@ -745,13 +868,13 @@
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@nevenkrcmarek -->
 									<div class="offers_image_background"
-										style="background-image:url({% static 'images/offer_3.jpg' %})"></div>
-									<div class="offer_name"><a href="#">island dream</a></div>
+										style="background-image:url({% static 'images/viaje3.jpg' %})"></div>
+									<div class="offer_name"><a href="#">Millpu</a></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$90<span>per night</span></div>
+									<div class="offers_price">s/. 90<span></span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -770,7 +893,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="/offers">read more</a></div>
+									<div class="offers_link"><a href="/offers">ver más</a></div>
 								</div>
 							</div>
 						</div>
@@ -785,13 +908,13 @@
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@mantashesthaven -->
 									<div class="offers_image_background"
-										style="background-image:url({% static 'images/offer_4.jpg' %})"></div>
-									<div class="offer_name"><a href="#">travel light</a></div>
+										style="background-image:url({% static 'images/viaje4.jpg' %})"></div>
+									<div class="offer_name"><a href="#">Quinua</a></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$30<span>per night</span></div>
+									<div class="offers_price">s/. 30<span></span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -810,7 +933,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="/offers">read more</a></div>
+									<div class="offers_link"><a href="/offers">ver más</a></div>
 								</div>
 							</div>
 						</div>

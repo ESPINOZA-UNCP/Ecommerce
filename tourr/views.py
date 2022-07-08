@@ -11,8 +11,8 @@ from .models import *
 
 # Create your views here.
 def offers_view(request):
-    viajes = Viajes.objects.all()
-    contexto = {'viajes': viajes}
+    lugarturistico = Lugarturistico.objects.all()
+    contexto = {'lugarturistico': lugarturistico}
     return render(request, 'offers.html', contexto)
 
 def contact_view(request):
