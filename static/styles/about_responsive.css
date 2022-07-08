@@ -5,7 +5,7 @@
 
 [Table of Contents]
 
-1. 1680px
+1. 1600px
 2. 1440px
 3. 1280px
 4. 1199px
@@ -22,159 +22,10 @@
 ******************************/
 
 /************
-0. 1730px
+1. 1600px
 ************/
 
-@media only screen and (max-width: 1730px)
-{
-	.temp_col
-	{
-		display: none !important;
-	}
-	.col-1680-4
-	{
-		flex: 0 0 33.333333%;
-    	max-width: 33.333333%;
-	}
-	.offers
-	{
-		padding-top: 0px;
-	}
-	.search
-	{
-		position: relative;
-		width: 100%;
-		height: auto;
-		background: linear-gradient(to right, #fa9e1b, #8d4fff);
-		z-index: 10;
-	}
-	.search_inner
-	{
-		width: 100%;
-		height: 100%;
-	}
-	.no-padding
-	{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.no-margin
-	{
-		margin-left: -15px;
-		margin-right: -15px;
-	}
-	.search_tabs_container
-	{
-		position: absolute;
-		bottom: 100%;
-		left: 15px;
-		width: calc(100% - 30px);
-	}
-	.search_tabs
-	{
-		flex-wrap: nowrap;
-
-		height: 94px;
-	}
-	.search_tab
-	{
-		font-size: 14px;
-		font-weight: 700;
-		color: #2d2c2c;
-		text-transform: uppercase;
-		text-align: center;
-		height: 100%;
-		flex-grow: 1;
-		background: #FFFFFF;
-		cursor: pointer;
-		-webkit-transition: all 200ms ease;
-		-moz-transition: all 200ms ease;
-		-ms-transition: all 200ms ease;
-		-o-transition: all 200ms ease;
-		transition: all 200ms ease;
-	}
-	.search_tab:not(:first-child):not(:nth-child(2))
-	{
-		border: none;
-		margin-right: 0px;
-		margin-bottom: 0px;
-	}
-	.search_tab:nth-child(2)
-	{
-		border-top-right-radius: 0px;
-		padding-right: 0px;
-	}
-	.search_tab:last-child
-	{
-		border-top-right-radius: 94px;
-		padding-right: 7px;
-	}
-	.search_panel
-	{
-		display: none !important;
-		width: 100%;
-		height: 100%;
-		-webkit-animation: fadeEffect 1s;
-	    animation: fadeEffect 1s;
-	    padding-left: 0px;
-	    padding-right: 0px;
-	    margin-top: 0px;
-	    padding-top: 57px;
-	    padding-bottom: 72px;
-	}
-	.search_item
-	{
-		margin-bottom: 0px;
-	}
-	.search_item:first-child
-	{
-		width: 37%;
-	}
-	.search_item:nth-child(2)
-	{
-		width: 16%;
-	}
-	.search_item:nth-child(3)
-	{
-		width: 16%;
-	}
-	.search_item:nth-child(4)
-	{
-		width: 9.947%;
-		margin-right: 0px;
-	}
-	.search_item:nth-child(5)
-	{
-		width: 9.947%;
-	}
-	.search_extras_item
-	{
-		width: 20%;
-	}
-	.search_extras_item:nth-child(even)
-	{
-		padding-left: 0px;
-	}
-	.more_options
-	{
-		width: 100%;
-		margin-top: 28px;
-	}
-	.search_button
-	{
-		margin-top: 29px;
-	}
-	.offers_sorting_container
-	{
-		margin-top: 105px;
-	}
-}
-
-/************
-1. 1680px
-************/
-
-@media only screen and (max-width: 1680px)
+@media only screen and (max-width: 1600px)
 {
 	
 }
@@ -216,9 +67,14 @@
 	{
 		margin-right: 121px;
 	}
-	.offers_sorting > li
+	.intro_image
 	{
-		margin-bottom: 17px;
+		position: relative;
+	    top: -13px;
+	}
+	.intro_image img
+	{
+		width: 100%;
 	}
 	.footer_blog_content
 	{
@@ -258,83 +114,31 @@
 	{
 		display: block;
 	}
-	.offers
+	.intro
 	{
-		padding-bottom: 105px;
+		padding-top: 71px;
 	}
-	.search
-	{
-		height: auto;
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
-	.search_tabs_container
+	.intro_image
 	{
 		position: relative;
-		bottom: auto;
-		left: auto;
-		width: auto;
-		top: auto;
+	    right: auto;
+	    top: auto;
 	}
-	.search_tabs
+	.intro_content
 	{
-		height: auto;
+		margin-top: 30px;
 	}
-	.search_tab
+	.add_content
 	{
-		height: 62px;
-		width: 100%;
-		padding-left: 15px;
+		padding-left: 71px;
 	}
-	.search_tab:first-child
+	.milestone_col
 	{
-		border-top-left-radius: 0px;
-		padding-left: 15px;
+		margin-bottom: 60px;
 	}
-	.search_tab:last-child
-	{
-		border-top-right-radius: 0px;
-	}
-	.search_panel
-	{
-		display: none !important;
-		margin-top: 0px;
-		padding-bottom: 0px;
-	}
-	.search_panel.active
-	{
-		display: flex!important;
-	}
-	.search_item
-	{
-		width: 100% !important;
-		margin-bottom: 23px;
-	}
-	.search_item:last-child
+	.milestone_col:last-child
 	{
 		margin-bottom: 0px;
-	}
-	.col-1680-4
-	{
-		flex: 0 0 100%;
-    	max-width: 100%;
-	}
-	.offers_image_container
-	{
-		width: 100%;
-		height: 443px;
-		margin-bottom: 38px;
-	}
-	.offers_image_background
-	{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
 	}
 	.footer_column
 	{
@@ -388,7 +192,51 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+	.home_title
+	{
+		font-size: 48px;
+	}
+	.stats_years
+	{
+		padding-left: 107px;
+	}
+	.stats_years_last
+	{
+		display: none !important;
+	}
+	.stats_years_new
+	{
+		float: left !important;
+	}
+	.stats_bar
+	{
+		width: 100%;
+	}
+	.stats_new
+	{
+		padding-right: 0px;
+	    padding-left: 40px;
+	    width: 40px;
+	    -webkit-transform: translateY(14px);
+	    -moz-transform: translateY(14px);
+	    -ms-transform: translateY(14px);
+	    -o-transform: translateY(14px);
+	    transform: translateY(15px);
+	}
+	.stats_new_icon
+	{
+		right: auto;
+	    left: 0;
+	    width: 40px;
+	}
+	.stats_new_content
+	{
+		margin-left: 10px;
+	}
+	.stats_last
+	{
+		display: none;
+	}
 }
 
 /************
@@ -397,18 +245,7 @@
 
 @media only screen and (max-width: 767px)
 {
-	.search_extras_item
-	{
-		width: 50%;
-	}
-	.offers_image_container
-	{
-		height: 327px;
-	}
-	.home_title
-	{
-    	font-size: 48px;
-	}
+	
 }
 
 /************
@@ -531,37 +368,40 @@
 	{
 		font-size: 24px;
 	}
-	.offers_image_container
+	.intro_title
 	{
-		height: calc((100vw - 30px) / 0.97);
+		font-size: 21px;
 	}
-	.offers_price
+	.intro_text
 	{
-		font-size: 30px;
+		margin-top: 45px;
 	}
-	.offers_price span
+	.stats_text
+	{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.stats_years
+	{
+		float: none !important;
+		padding-left: 0px;
+	}
+	.stats_contents
+	{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.stats_number
+	{
+		font-size: 18px;
+	}
+	.stats_type
 	{
 		font-size: 12px;
-		margin-left: 7px;
 	}
-	.offer_reviews_rating
+	.add_content
 	{
-		width: 56px;
-	    height: 47px;
-	    font-size: 24px;
-	    line-height: 47px;
-	}
-	.offer_reviews_title
-	{
-		font-size: 11px;
-	}
-	.offer_reviews_subtitle
-	{
-		font-size: 11px;
-	}
-	.offers_text
-	{
-		font-size: 13px;
+		padding-left: 40px;
 	}
 	.footer_about_text
 	{
@@ -595,6 +435,10 @@
 {
 	h2{font-size: 24px;}
 	p{font-size: 13px;}
+	.milestone_counter
+	{
+		font-size: 36px;
+	}
 }
 
 /************

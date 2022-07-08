@@ -5,7 +5,7 @@
 
 [Table of Contents]
 
-1. 1680px
+1. 1600px
 2. 1440px
 3. 1280px
 4. 1199px
@@ -22,159 +22,10 @@
 ******************************/
 
 /************
-0. 1730px
+1. 1600px
 ************/
 
-@media only screen and (max-width: 1730px)
-{
-	.temp_col
-	{
-		display: none !important;
-	}
-	.col-1680-4
-	{
-		flex: 0 0 33.333333%;
-    	max-width: 33.333333%;
-	}
-	.offers
-	{
-		padding-top: 0px;
-	}
-	.search
-	{
-		position: relative;
-		width: 100%;
-		height: auto;
-		background: linear-gradient(to right, #fa9e1b, #8d4fff);
-		z-index: 10;
-	}
-	.search_inner
-	{
-		width: 100%;
-		height: 100%;
-	}
-	.no-padding
-	{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.no-margin
-	{
-		margin-left: -15px;
-		margin-right: -15px;
-	}
-	.search_tabs_container
-	{
-		position: absolute;
-		bottom: 100%;
-		left: 15px;
-		width: calc(100% - 30px);
-	}
-	.search_tabs
-	{
-		flex-wrap: nowrap;
-
-		height: 94px;
-	}
-	.search_tab
-	{
-		font-size: 14px;
-		font-weight: 700;
-		color: #2d2c2c;
-		text-transform: uppercase;
-		text-align: center;
-		height: 100%;
-		flex-grow: 1;
-		background: #FFFFFF;
-		cursor: pointer;
-		-webkit-transition: all 200ms ease;
-		-moz-transition: all 200ms ease;
-		-ms-transition: all 200ms ease;
-		-o-transition: all 200ms ease;
-		transition: all 200ms ease;
-	}
-	.search_tab:not(:first-child):not(:nth-child(2))
-	{
-		border: none;
-		margin-right: 0px;
-		margin-bottom: 0px;
-	}
-	.search_tab:nth-child(2)
-	{
-		border-top-right-radius: 0px;
-		padding-right: 0px;
-	}
-	.search_tab:last-child
-	{
-		border-top-right-radius: 94px;
-		padding-right: 7px;
-	}
-	.search_panel
-	{
-		display: none !important;
-		width: 100%;
-		height: 100%;
-		-webkit-animation: fadeEffect 1s;
-	    animation: fadeEffect 1s;
-	    padding-left: 0px;
-	    padding-right: 0px;
-	    margin-top: 0px;
-	    padding-top: 57px;
-	    padding-bottom: 72px;
-	}
-	.search_item
-	{
-		margin-bottom: 0px;
-	}
-	.search_item:first-child
-	{
-		width: 37%;
-	}
-	.search_item:nth-child(2)
-	{
-		width: 16%;
-	}
-	.search_item:nth-child(3)
-	{
-		width: 16%;
-	}
-	.search_item:nth-child(4)
-	{
-		width: 9.947%;
-		margin-right: 0px;
-	}
-	.search_item:nth-child(5)
-	{
-		width: 9.947%;
-	}
-	.search_extras_item
-	{
-		width: 20%;
-	}
-	.search_extras_item:nth-child(even)
-	{
-		padding-left: 0px;
-	}
-	.more_options
-	{
-		width: 100%;
-		margin-top: 28px;
-	}
-	.search_button
-	{
-		margin-top: 29px;
-	}
-	.offers_sorting_container
-	{
-		margin-top: 105px;
-	}
-}
-
-/************
-1. 1680px
-************/
-
-@media only screen and (max-width: 1680px)
+@media only screen and (max-width: 1600px)
 {
 	
 }
@@ -216,13 +67,13 @@
 	{
 		margin-right: 121px;
 	}
-	.offers_sorting > li
-	{
-		margin-bottom: 17px;
-	}
 	.footer_blog_content
 	{
 		padding-left: 74px;
+	}
+	.about_social_item
+	{
+		margin-right: 7px;
 	}
 }
 
@@ -258,83 +109,33 @@
 	{
 		display: block;
 	}
-	.offers
+	.elements_accordions
 	{
-		padding-bottom: 105px;
+		margin-top: 40px;
 	}
-	.search
+	.milestone_col
 	{
-		height: auto;
-		padding-top: 100px;
-		padding-bottom: 100px;
+		margin-bottom: 60px;
 	}
-	.search_tabs_container
-	{
-		position: relative;
-		bottom: auto;
-		left: auto;
-		width: auto;
-		top: auto;
-	}
-	.search_tabs
-	{
-		height: auto;
-	}
-	.search_tab
-	{
-		height: 62px;
-		width: 100%;
-		padding-left: 15px;
-	}
-	.search_tab:first-child
-	{
-		border-top-left-radius: 0px;
-		padding-left: 15px;
-	}
-	.search_tab:last-child
-	{
-		border-top-right-radius: 0px;
-	}
-	.search_panel
-	{
-		display: none !important;
-		margin-top: 0px;
-		padding-bottom: 0px;
-	}
-	.search_panel.active
-	{
-		display: flex!important;
-	}
-	.search_item
-	{
-		width: 100% !important;
-		margin-bottom: 23px;
-	}
-	.search_item:last-child
+	.milestone_col:last-child
 	{
 		margin-bottom: 0px;
 	}
-	.col-1680-4
+	.loader_col
 	{
-		flex: 0 0 100%;
-    	max-width: 100%;
+		margin-bottom: 60px;
 	}
-	.offers_image_container
+	.loader_col:last-child
 	{
-		width: 100%;
-		height: 443px;
-		margin-bottom: 38px;
+		margin-bottom: 0px;
 	}
-	.offers_image_background
+	.icon_box
 	{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
+		margin-bottom: 60px;
+	}
+	.icon_box:last-child
+	{
+		margin-bottom: 0px;
 	}
 	.footer_column
 	{
@@ -388,7 +189,10 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+	.home_title
+	{
+		font-size: 48px;
+	}
 }
 
 /************
@@ -397,18 +201,7 @@
 
 @media only screen and (max-width: 767px)
 {
-	.search_extras_item
-	{
-		width: 50%;
-	}
-	.offers_image_container
-	{
-		height: 327px;
-	}
-	.home_title
-	{
-    	font-size: 48px;
-	}
+
 }
 
 /************
@@ -427,6 +220,7 @@
 	{
 		height: 44px;
 		border-radius: 22px;
+		line-height: 44px;
 	}
 	.button a
 	{
@@ -531,37 +325,45 @@
 	{
 		font-size: 24px;
 	}
-	.offers_image_container
+	.elements_title
 	{
-		height: calc((100vw - 30px) / 0.97);
+		font-size: 24px;
 	}
-	.offers_price
+	.loader_col
 	{
-		font-size: 30px;
+		margin-bottom: 50px;
 	}
-	.offers_price span
+	.loader
 	{
-		font-size: 12px;
-		margin-left: 7px;
+		width: 136px;
+		height: 136px;
 	}
-	.offer_reviews_rating
+	.loader canvas
 	{
-		width: 56px;
-	    height: 47px;
-	    font-size: 24px;
-	    line-height: 47px;
+		width: 136px;
+		height: 136px;
 	}
-	.offer_reviews_title
+	.loader strong
 	{
-		font-size: 11px;
+		top: 40px;
+		font-size: 28px;
 	}
-	.offer_reviews_subtitle
+	.loader span
 	{
-		font-size: 11px;
+		top: 56%;
+		font-size: 13px;
 	}
-	.offers_text
+	.icon_box h3
+	{
+		font-size: 22px;
+	}
+	.icon_box p
 	{
 		font-size: 13px;
+	}
+	.footer_about
+	{
+		padding-top: 47px;
 	}
 	.footer_about_text
 	{
@@ -595,6 +397,10 @@
 {
 	h2{font-size: 24px;}
 	p{font-size: 13px;}
+	.milestone_counter
+	{
+		font-size: 36px;
+	}
 }
 
 /************
