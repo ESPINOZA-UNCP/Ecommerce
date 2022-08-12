@@ -121,3 +121,18 @@ class Viajes(models.Model):
     class Meta:
         managed = True
         db_table = 'viajes'
+
+class Lugarturistico(models.Model):
+    id_lugar = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=255)
+    descripcion = models.TextField()
+    costo = models.PositiveIntegerField()
+    imagen = models.ImageField(upload_to='viajes', blank=False, null=False)
+    deleted_at = models.DateTimeField(blank=True, null=True)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        managed = True
+        db_table = 'lugarturistico'

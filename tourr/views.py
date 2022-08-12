@@ -10,9 +10,30 @@ from django.contrib.auth import get_user_model
 from .models import *
 
 # Create your views here.
+
+def compras_view(request,lugar,ciudad):
+    if  request.user.is_authenticated:
+        print("ciudad: " + ciudad)
+        return render(request, 'pagos/facturacion.html',{
+            'title': 'Facturacion',
+            'link':'facturacion',
+            'lugar':lugar,
+            'ciudad':ciudad,
+        })
+    else:
+        return render(request, 'login.html',{
+            'title': 'login',
+            'link':'login',
+        })
+
+def single_listing_view(request, lugar):
+    print("Lugar turistico: "+lugar)
+    return render(request, 'single_listing.html',{
+        'title': 'Single Listing',
+    })
 def offers_view(request):
-    viajes = Viajes.objects.all()
-    contexto = {'viajes': viajes}
+    lugarturisticos = Lugarturistico.objects.all()
+    contexto = {'lugarturisticos': lugarturisticos}
     return render(request, 'offers.html', contexto)
 
 def contact_view(request):

@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import *
 
 # Register your models here.
-admin.site.register(Viajes)
+admin.site.register(Lugarturistico)
 admin.site.register(Usuario)
 # class UserAdmin(BaseUserAdmin):
 #     ordering = ['email']

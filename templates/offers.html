@@ -22,7 +22,7 @@
 			<div class="search_inner">
 
 				<!-- Search Contents -->
-				
+
 				<div class="container fill_height no-padding">
 					<div class="row fill_height no-margin">
 						<div class="col fill_height no-padding">
@@ -30,56 +30,60 @@
 							<!-- Search Tabs -->
 
 							<div class="search_tabs_container">
-                                <div
-                                    class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                                    <div
-                                        class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/ofertas.png' %}" alt=""><span>OFERTAS</span></div>
-                                    <div
-                                        class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/viajes.png' %}" alt="">VIAJES</div>
-                                    <div
-                                        class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/viajesinternacionales.png' %}" alt="">VIAJES INTERNACIONALES</div>
-                                    <div
-                                        class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/paquetes.png' %}" alt="">PAQUETES</div>
-                                    <div
-                                        class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/hoteles.png' %}" alt="">HOTELES</div>
-                                    <div
-                                        class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                                        <img src="{% static 'images/actividades.png' %}" alt="">ACTIVIDADES</div>
-                                </div>
-                            </div>
+								<div
+									class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+									<div
+										class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/ofertas.png' %}" alt=""><span>OFERTAS</span></div>
+									<div
+										class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/viajes.png' %}" alt="">VIAJES</div>
+									<div
+										class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/viajesinternacionales.png' %}" alt="">VIAJES INTERNACIONALES
+									</div>
+									<div
+										class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/paquetes.png' %}" alt="">PAQUETES</div>
+									<div
+										class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/hoteles.png' %}" alt="">HOTELES</div>
+									<div
+										class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+										<img src="{% static 'images/actividades.png' %}" alt="">ACTIVIDADES</div>
+								</div>
+							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel active">
-								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_1"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_1" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_1"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_1" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_1"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
@@ -89,260 +93,291 @@
 										<ul class="search_extras clearfix">
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_1" class="search_extras_cb">
-													<label for="search_extras_1">Pet Friendly</label>
-												</div>	
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_2" class="search_extras_cb">
-													<label for="search_extras_2">Car Parking</label>
+													<input type="checkbox" id="search_extras_1"
+														class="search_extras_cb">
+													<label for="search_extras_1">Mascota</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_3" class="search_extras_cb">
-													<label for="search_extras_3">Wireless Internet</label>
+													<input type="checkbox" id="search_extras_2"
+														class="search_extras_cb">
+													<label for="search_extras_2">Aparcamiento de coches</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_4" class="search_extras_cb">
-													<label for="search_extras_4">Reservations</label>
+													<input type="checkbox" id="search_extras_3"
+														class="search_extras_cb">
+													<label for="search_extras_3">Conexión de Internet</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_5" class="search_extras_cb">
-													<label for="search_extras_5">Private Parking</label>
+													<input type="checkbox" id="search_extras_4"
+														class="search_extras_cb">
+													<label for="search_extras_4">Reservaciones</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_6" class="search_extras_cb">
-													<label for="search_extras_6">Smoking Area</label>
+													<input type="checkbox" id="search_extras_5"
+														class="search_extras_cb">
+													<label for="search_extras_5">Estacionamiento privado</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_7" class="search_extras_cb">
-													<label for="search_extras_7">Wheelchair Accessible</label>
+													<input type="checkbox" id="search_extras_6"
+														class="search_extras_cb">
+													<label for="search_extras_6">Área de fumadores</label>
 												</div>
 											</li>
 											<li class="search_extras_item">
 												<div class="clearfix">
-													<input type="checkbox" id="search_extras_8" class="search_extras_cb">
-													<label for="search_extras_8">Pool</label>
+													<input type="checkbox" id="search_extras_7"
+														class="search_extras_cb">
+													<label for="search_extras_7">Silla de ruedas accesible</label>
+												</div>
+											</li>
+											<li class="search_extras_item">
+												<div class="clearfix">
+													<input type="checkbox" id="search_extras_8"
+														class="search_extras_cb">
+													<label for="search_extras_8">Piscina</label>
 												</div>
 											</li>
 										</ul>
 									</div>
 									<div class="more_options">
 										<div class="more_options_trigger">
-											<a href="#">load more options</a>
+											<a href="#">más opciones</a>
 										</div>
 										<ul class="more_options_list clearfix">
 											<li class="more_options_item">
 												<div class="clearfix">
-													<input type="checkbox" id="more_options_1" class="search_extras_cb">
-													<label for="more_options_1">Pet Friendly</label>
-												</div>	
+													<input type="checkbox" id="more_options_1"
+														class="search_extras_cb">
+													<label for="more_options_1">Comida</label>
+												</div>
 											</li>
 											<li class="more_options_item">
 												<div class="clearfix">
-													<input type="checkbox" id="more_options_2" class="search_extras_cb">
-													<label for="more_options_2">Car Parking</label>
+													<input type="checkbox" id="more_options_2"
+														class="search_extras_cb">
+													<label for="more_options_2">Movilidad</label>
 												</div>
 											</li>
 										</ul>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_2"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_2" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_2"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_2" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_2"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_3"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_3" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_3"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_3" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_3"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_4"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_4" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_4"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_4" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_4"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_5"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_5" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_5"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_5" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_5"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
 							<!-- Search Panel -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="#" id="search_form_6"
+									class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>destination</div>
+										<div>DESTINO</div>
 										<input type="text" class="destination search_input" required="required">
 									</div>
 									<div class="search_item">
-										<div>check in</div>
+										<div>FECHA IDA</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>check out</div>
+										<div>FECHA VUELTA</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_6" class="dropdown_item_select search_input">
+										<div>ADULTOS</div>
+										<select name="adults" id="adults_6"
+											class="dropdown_item_select search_input">
 											<option>01</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
 									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_6" class="dropdown_item_select search_input">
+										<div>NIÑOS</div>
+										<select name="children" id="children_6"
+											class="dropdown_item_select search_input">
 											<option>0</option>
 											<option>02</option>
 											<option>03</option>
 										</select>
 									</div>
-									<button class="button search_button">search<span></span><span></span><span></span></button>
+									<button
+										class="button search_button">BUSCAR<span></span><span></span><span></span></button>
 								</form>
 							</div>
 						</div>
 					</div>
-				</div>	
-			</div>	
+				</div>
+			</div>
 		</div>
 
 		<!-- Offers -->
@@ -351,39 +386,44 @@
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
-					
+
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
 						<ul class="offers_sorting">
 							<li>
-								<span class="sorting_text">price</span>
+								<span class="sorting_text">precio</span>
 								<i class="fa fa-chevron-down"></i>
 								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".price_sorting"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }' data-parent=".price_sorting"><span>ascending</span></li>
+									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'
+										data-parent=".price_sorting"><span>show all</span></li>
+									<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }'
+										data-parent=".price_sorting"><span>ascending</span></li>
 								</ul>
 							</li>
 							<li>
-								<span class="sorting_text">location</span>
+								<span class="sorting_text">ubicación</span>
 								<i class="fa fa-chevron-down"></i>
 								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>default</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'><span>alphabetical</span></li>
+									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'>
+										<span>default</span></li>
+									<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'>
+										<span>alphabetical</span></li>
 								</ul>
 							</li>
 							<li>
-								<span class="sorting_text">stars</span>
+								<span class="sorting_text">estrellas</span>
 								<i class="fa fa-chevron-down"></i>
 								<ul>
 									<li class="filter_btn" data-filter="*"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'><span>ascending</span></li>
+									<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'>
+										<span>ascending</span></li>
 									<li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
 									<li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
 									<li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
 								</ul>
 							</li>
 							<li class="distance_item">
-								<span class="sorting_text">distance from center</span>
+								<span class="sorting_text">distancia desde el centro</span>
 								<i class="fa fa-chevron-down"></i>
 								<ul>
 									<li class="num_sorting_btn"><span>distance</span></li>
@@ -392,7 +432,7 @@
 								</ul>
 							</li>
 							<li>
-								<span class="sorting_text">reviews</span>
+								<span class="sorting_text">reseñas</span>
 								<i class="fa fa-chevron-down"></i>
 								<ul>
 									<li class="num_sorting_btn"><span>review</span></li>
@@ -410,155 +450,22 @@
 					<div class="offers_grid">
 
 						<!-- Offers Item -->
-                        {% if viajes %}
-                        {% for viaje in viajes %}
-                            <div class="offers_item rating_3">
-                                <div class="row">
-                                    <div class="col-lg-1 temp_col"></div>
-                                    <div class="col-lg-3 col-1680-4">
-                                        <div class="offers_image_container">
-                                            <!-- Image by https://unsplash.com/@kensuarez -->
-                                            <div class="offers_image_background" style="background-image:url({{viaje.imagen.url}})"></div>
-                                            <div class="offer_name"><a href="single_listing.html">{{viaje.nombre}}</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="offers_content">
-                                            <div class="offers_price">S/.{{viaje.costo}}<span>por noche</span></div>
-                                            <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-                                                <i></i>
-                                                <i></i>
-                                                <i></i>
-                                                <i></i>
-                                                <i></i>
-                                            </div>
-                                            <p class="offers_text">{{viaje.descripcion}}</p>
-                                            <div class="offers_icons">
-                                                <ul class="offers_icons_list">
-                                                    <li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
-                                                    <li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
-                                                    <li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
-                                                    <li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt=""></li>
-                                                </ul>
-                                            </div>
-                                            <div class="button book_button"><a href="#">book<span></span><span></span><span></span></a></div>
-                                            <div class="offer_reviews">
-                                                <div class="offer_reviews_content">
-                                                    <div class="offer_reviews_title">very good</div>
-                                                    <div class="offer_reviews_subtitle">100 reviews</div>
-                                                </div>
-                                                <div class="offer_reviews_rating text-center">8.1</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                        {% endif %}
-
-						<!-- Offers Item -->
-
-						<div class="offers_item rating_3">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@thoughtcatalog -->
-										<div class="offers_image_background" style="background-image:url({% static 'images/offer_5.jpg' %})"></div>
-										<div class="offer_name"><a href="single_listing.html">eurostar hotel</a></div>
-									</div>
-								</div>
-								<div class="col-lg-8">
-									<div class="offers_content">
-										<div class="offers_price">$50<span>per night</span></div>
-										<div class="rating_r rating_r_3 offers_rating" data-rating="3">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div>
-										<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet.</p>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt=""></li>
-											</ul>
-										</div>
-										<div class="button book_button"><a href="#">book<span></span><span></span><span></span></a></div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">very good</div>
-												<div class="offer_reviews_subtitle">100 reviews</div>
-											</div>
-											<div class="offer_reviews_rating text-center">8.1</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Offers Item -->
-
-						<div class="offers_item rating_5">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@mindaugas -->
-										<div class="offers_image_background" style="background-image:url({% static 'images/offer_6.jpg' %})"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div>
-								<div class="col-lg-8">
-									<div class="offers_content">
-										<div class="offers_price">$110<span>per night</span></div>
-										<div class="rating_r rating_r_5 offers_rating"  data-rating="5">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div>
-										<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet.</p>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt=""></li>
-											</ul>
-										</div>
-										<div class="button book_button"><a href="#">book<span></span><span></span><span></span></a></div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">very good</div>
-												<div class="offer_reviews_subtitle">100 reviews</div>
-											</div>
-											<div class="offer_reviews_rating text-center">8.1</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Offers Item -->
-
+						{%if lugarturisticos %}
+						{% for lugarturistico in lugarturisticos %}
 						<div class="offers_item rating_4">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
 								<div class="col-lg-3 col-1680-4">
 									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@rktkn -->
-										<div class="offers_image_background" style="background-image:url({% static 'images/offer_7.jpg' %})"></div>
-										<div class="offer_name"><a href="single_listing.html">eurostar hotel</a></div>
+										<!-- Image by https://unsplash.com/@kensuarez -->
+										<div class="offers_image_background"
+											style="background-image:url({{lugarturistico.imagen.url}})"></div>
+										<div class="offer_name"><a href="{% url 'single_listing' '{{lugarturistico.nombre}}' %}">{{lugarturistico.nombre}}</a></div>
 									</div>
 								</div>
 								<div class="col-lg-8">
 									<div class="offers_content">
-										<div class="offers_price">$50<span>per night</span></div>
+										<div class="offers_price">s/ {{lugarturistico.costo}}<span></span></div>
 										<div class="rating_r rating_r_4 offers_rating" data-rating="4">
 											<i></i>
 											<i></i>
@@ -566,77 +473,40 @@
 											<i></i>
 											<i></i>
 										</div>
-										<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet.</p>
+										<p class="offers_text">{{lugarturistico.descripcion}}</p>
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt=""></li>
+												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt="">
+												</li>
+												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt="">
+												</li>
+												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt="">
+												</li>
+												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt="">
+												</li>
 											</ul>
 										</div>
-										<div class="button book_button"><a href="#">book<span></span><span></span><span></span></a></div>
+										<div class="button book_button"><a
+												href="/single_listing">más detalle<span></span><span></span><span></span></a></div>
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">very good</div>
-												<div class="offer_reviews_subtitle">100 reviews</div>
+												<div class="offer_reviews_title">muy bueno</div>
+												<div class="offer_reviews_subtitle">100 visitas</div>
 											</div>
-											<div class="offer_reviews_rating text-center">8.1</div>
+											<div class="offer_reviews_rating text-center">9.1</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<!-- Offers Item -->
-
-						<div class="offers_item rating_3">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										<!-- Image by https://unsplash.com/@itsnwa -->
-										<div class="offers_image_background" style="background-image:url({% static 'images/offer_8.jpg' %})"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div>
-								<div class="col-lg-8">
-									<div class="offers_content">
-										<div class="offers_price">$90<span>per night</span></div>
-										<div class="rating_r rating_r_3 offers_rating" data-rating="3">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div>
-										<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet.</p>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="{% static 'images/post.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/compass.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/bicycle.png' %}" alt=""></li>
-												<li class="offers_icons_item"><img src="{% static 'images/sailboat.png' %}" alt=""></li>
-											</ul>
-										</div>
-										<div class="button book_button"><a href="#">book<span></span><span></span><span></span></a></div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">very good</div>
-												<div class="offer_reviews_subtitle">100 reviews</div>
-											</div>
-											<div class="offer_reviews_rating text-center">8.1</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
+						{% endif %}
 
 					</div>
 				</div>
 
 			</div>
-		</div>		
+		</div>
 	</div>
 
 	<!-- Footer -->
@@ -650,15 +520,13 @@
 					<div class="footer_col">
 						<div class="footer_content footer_about">
 							<div class="logo_container footer_logo">
-								<div class="logo"><a href="#"><img src="{% static 'images/logo.png' %}" alt="">aloja</a></div>
+								<div class="logo"><a href="#"><img src="{% static 'images/LogoAlojaTravelsBlanco.png' %}" alt=""></a></div>
 							</div>
-							<p class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</p>
+							<p class="footer_about_text">Conoce el Perú con nosotros y vive experiencias inolvidables con los tours que tenemos para ti.</p>
 							<ul class="footer_social_list">
-								<li class="footer_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
 								<li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-								<li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="footer_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li class="footer_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-whatsapp"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -667,15 +535,15 @@
 				<!-- Footer Column -->
 				<div class="col-lg-3 footer_column">
 					<div class="footer_col">
-						<div class="footer_title">blog posts</div>
+						<div class="footer_title">últimas noticias</div>
 						<div class="footer_content footer_blog">
 							
 							<!-- Footer blog item -->
 							<div class="footer_blog_item clearfix">
 								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_1.jpg' %}" alt="https://unsplash.com/@avidenov"></div>
 								<div class="footer_blog_content">
-									<div class="footer_blog_title"><a href="/blog">Travel with us this year</a></div>
-									<div class="footer_blog_date">Nov 29, 2017</div>
+									<div class="footer_blog_title"><a href="/blog">Nuevos Tours 2022</a>
+									<div class="footer_blog_date">May 29, 2022</div>
 								</div>
 							</div>
 							
@@ -683,8 +551,8 @@
 							<div class="footer_blog_item clearfix">
 								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_2.jpg' %}" alt="https://unsplash.com/@deannaritchie"></div>
 								<div class="footer_blog_content">
-									<div class="footer_blog_title"><a href="/blog">New destinations for you</a></div>
-									<div class="footer_blog_date">Nov 29, 2017</div>
+									<div class="footer_blog_title"><a href="/blog">Nuevos destinos para ti</a>
+									<div class="footer_blog_date">Nov 29, 2021</div>
 								</div>
 							</div>
 
@@ -692,8 +560,8 @@
 							<div class="footer_blog_item clearfix">
 								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_3.jpg' %}" alt="https://unsplash.com/@bergeryap87"></div>
 								<div class="footer_blog_content">
-									<div class="footer_blog_title"><a href="/blog">Travel with us this year</a></div>
-									<div class="footer_blog_date">Nov 29, 2017</div>
+									<div class="footer_blog_title"><a href="/blog">Planes Máncora 2021</a>
+									<div class="footer_blog_date">Jul 28, 2021</div>
 								</div>
 							</div>
 
@@ -707,14 +575,14 @@
 						<div class="footer_title">tags</div>
 						<div class="footer_content footer_tags">
 							<ul class="tags_list clearfix">
-								<li class="tag_item"><a href="#">design</a></li>
-								<li class="tag_item"><a href="#">fashion</a></li>
-								<li class="tag_item"><a href="#">music</a></li>
-								<li class="tag_item"><a href="#">video</a></li>
-								<li class="tag_item"><a href="#">party</a></li>
-								<li class="tag_item"><a href="#">photography</a></li>
-								<li class="tag_item"><a href="#">adventure</a></li>
-								<li class="tag_item"><a href="#">travel</a></li>
+								<li class="tag_item"><a href="#">viajes</a></li>
+								<li class="tag_item"><a href="#">tours</a></li>
+								<li class="tag_item"><a href="#">aventura</a></li>
+								<li class="tag_item"><a href="#">playa</a></li>
+								<li class="tag_item"><a href="#">museo</a></li>
+								<li class="tag_item"><a href="#">selva</a></li>
+								<li class="tag_item"><a href="#">festividades</a></li>
+								<li class="tag_item"><a href="#">sierra</a></li>
 							</ul>
 						</div>
 					</div>
@@ -723,24 +591,20 @@
 				<!-- Footer Column -->
 				<div class="col-lg-3 footer_column">
 					<div class="footer_col">
-						<div class="footer_title">contact info</div>
+						<div class="footer_title">datos de contacto</div>
 						<div class="footer_content footer_contact">
 							<ul class="contact_info_list">
 								<li class="contact_info_item d-flex flex-row">
 									<div><div class="contact_info_icon"><img src="{% static 'images/placeholder.svg' %}" alt=""></div></div>
-									<div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+									<div class="contact_info_text">Jr.Junin #646 - El Tambo</div>
 								</li>
 								<li class="contact_info_item d-flex flex-row">
 									<div><div class="contact_info_icon"><img src="{% static 'images/phone-call.svg' %}" alt=""></div></div>
-									<div class="contact_info_text">2556-808-8613</div>
+									<div class="contact_info_text">990-555-921</div>
 								</li>
 								<li class="contact_info_item d-flex flex-row">
 									<div><div class="contact_info_icon"><img src="{% static 'images/message.svg' %}" alt=""></div></div>
-									<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
-								</li>
-								<li class="contact_info_item d-flex flex-row">
-									<div><div class="contact_info_icon"><img src="{% static 'images/planet-earth.svg' %}" alt=""></div></div>
-									<div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
+									<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">info@alojatravels.com</a></div>
 								</li>
 							</ul>
 						</div>
@@ -767,11 +631,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="/inicio">home</a></li>
-								<li class="footer_nav_item"><a href="/about">about us</a></li>
-								<li class="footer_nav_item"><a href="#">offers</a></li>
-								<li class="footer_nav_item"><a href="/blog">news</a></li>
-								<li class="footer_nav_item"><a href="/contact">contact</a></li>
+								<li class="footer_nav_item"><a href="/inicio">INICIO</a></li>
+								<li class="footer_nav_item"><a href="/about">NOSOTROS</a></li>
+								<li class="footer_nav_item"><a href="#">VIAJES</a></li>
+								<li class="footer_nav_item"><a href="/blog">NOTICIAS</a></li>
+								<li class="footer_nav_item"><a href="/contact">CONTÁCTANOS</a></li>
 							</ul>
 						</div>
 					</div>

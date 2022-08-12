@@ -21,6 +21,8 @@ urlpatterns = [
     path('contact/',views.contact_view, name = 'contact'),
     path('blog/',views.blog_view, name = 'blog'),
     path('offers/',views.offers_view, name = 'offers'),
+    path('single_listing/<str:lugar>',views.single_listing_view, name = 'single_listing'),
+    path('compras/<str:lugar>,<str:ciudad>',views.compras_view, name = 'compras'),
 
 
 ]

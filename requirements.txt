@@ -1,0 +1,5 @@
+Django == 4.0.5
+mysqlclient == 2.1.1
+Pillow==9.2.0
+py3-validate-email==1.0.5
+# nombre de base de datos = db_alojatravels
