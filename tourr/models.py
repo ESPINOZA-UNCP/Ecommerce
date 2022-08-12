@@ -125,6 +125,7 @@ class Viajes(models.Model):
 class Lugarturistico(models.Model):
     id_lugar = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=255)
+    ciudad = models.CharField(max_length=255)
     descripcion = models.TextField()
     costo = models.PositiveIntegerField()
     imagen = models.ImageField(upload_to='viajes', blank=False, null=False)
