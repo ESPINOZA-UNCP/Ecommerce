@@ -399,7 +399,7 @@
                     <!-- Title -->
                     <div class="hotel_title_container d-flex flex-lg-row flex-column">
                         <div class="hotel_title_content">
-                            <h1 class="hotel_title">CATARATA TIGRE</h1>
+                            <h1 class="hotel_title">{{lugar_nombre}}</h1>
                             <div class="rating_r rating_r_5 hotel_rating">
                                 <i></i>
                                 <i></i>
@@ -410,7 +410,7 @@
                             <div class="hotel_location">Regiones/ Huancayo, Pasco</div>
                         </div>
                         <div class="hotel_title_button ml-lg-auto text-lg-right">
-                            <div class="button book_button trans_200"><a href="{% url 'compras' lugar='CATARATA TIGRE' ciudad='Pasco' %}">comprar ahora<span></span><span></span><span></span></a></div>
+                            <div class="button book_button trans_200"><a href="{% url 'compras' lugar=lugar_nombre ciudad='Pasco' %}">comprar ahora<span></span><span></span><span></span></a></div>
                             <div class="hotel_map_link_container">
                                 <div class="hotel_map_link">Galería de imágenes</div> 
                             </div>
@@ -420,7 +420,7 @@
                     <!-- Listing Image -->
 
                     <div class="hotel_image">
-                        <img src="{% static 'images/SelvaCentral0.png' %}" alt="">
+                        <img src="{{lugar_turistico.imagen.url}}" alt="">
                         <div class="hotel_review_container d-flex flex-column align-items-center justify-content-center">
                             <div class="hotel_review">
                                 <div class="hotel_review_content">

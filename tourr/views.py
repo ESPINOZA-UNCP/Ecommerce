@@ -14,11 +14,13 @@ from .models import *
 def compras_view(request,lugar,ciudad):
     if  request.user.is_authenticated:
         print("ciudad: " + ciudad)
+        lugar_turistico = Lugarturistico.objects.get(nombre=lugar)
         return render(request, 'pagos/facturacion.html',{
             'title': 'Facturacion',
             'link':'facturacion',
             'lugar':lugar,
             'ciudad':ciudad,
+            'lugar_turistico':lugar_turistico,
         })
     else:
         return render(request, 'login.html',{
@@ -28,8 +30,12 @@ def compras_view(request,lugar,ciudad):
 
 def single_listing_view(request, lugar):
     print("Lugar turistico: "+lugar)
+    lugar_turistico = Lugarturistico.objects.get(nombre=lugar)
+    print("Lugar turistico: ",lugar_turistico.costo)
     return render(request, 'single_listing.html',{
         'title': 'Single Listing',
+        'lugar_nombre':lugar,
+        'lugar_turistico':lugar_turistico,
     })
 def offers_view(request):
     lugarturisticos = Lugarturistico.objects.all()

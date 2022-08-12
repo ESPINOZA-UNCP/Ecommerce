@@ -1326,144 +1326,13 @@
     <script type="text/javascript" charset="UTF-8"
         src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/intl/es_419/util.js"></script>
 </head>
+{% extends 'header.html' %}
 {% block content %}
 <body
     class="page-template-default page page-id-415  st-header-1 theme-traveler woocommerce-checkout woocommerce-page woocommerce-js wide menu_style1 wpb-js-composer js-comp-ver-6.9.0 vc_responsive"
-    style="">
-    <header id="header">
-        <div class="header">
-            <a href="#" class="toggle-menu"><i class="input-icon st-border-radius field-icon fa"><svg width="24px"
-                        height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    style="margin-top:0px;">
 
-                        <defs></defs>
-                        <g id="Ico_off_menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <g id="Group" stroke="#1A2B48" stroke-width="1.5">
-                                <g id="navigation-menu-4">
-                                    <rect id="Rectangle-path" x="0.75" y="0.753" width="22.5" height="22.5" rx="1.5">
-                                    </rect>
-                                    <path d="M6.75,7.503 L17.25,7.503" id="Shape"></path>
-                                    <path d="M6.75,12.003 L17.25,12.003" id="Shape"></path>
-                                    <path d="M6.75,16.503 L17.25,16.503" id="Shape"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg></i></a>
-            <div class="header-left">
-                <a href="https://picchutravel.com/es/" class="logo hidden-xs">
-                    <img src="https://picchutravel.com/wp-content/uploads/logo-machu-picchu.png"
-                        alt="Agencia de Viajes y Turismo">
-                </a>
-                <a href="https://picchutravel.com/es/" class="logo hidden-lg hidden-md hidden-sm">
-                    <img src="https://picchutravel.com/wp-content/uploads/logo-machu-picchu-movil.png"
-                        alt="Agencia de Viajes y Turismo">
-                </a>
-                <nav id="st-main-menu">
-                    <a href="" class="back-menu"><i class="fa fa-angle-left"></i></a>
-                    <ul id="main-menu" class="menu main-menu">
-                        <li id="menu-item-346"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-346">
-                            <a class="" href="https://picchutravel.com/es/">Inicio</a></li>
-                        <li id="menu-item-353"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a class=""
-                                href="https://picchutravel.com/es/tours/">Tours</a></li>
-                        <li id="menu-item-350"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a class=""
-                                href="https://picchutravel.com/es/nosotros/">Nosotros</a></li>
-                        <li id="menu-item-343"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-343"><a class=""
-                                href="https://picchutravel.com/es/contactanos/">Contáctanos</a></li>
-                        <li id="menu-item-630"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630"><a class=""
-                                href="https://picchutravel.com/es/blog/">Blog</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-right">
-                <ul class="st-list">
-                    <li class="dropdown hidden-xs hidden-sm">
-                        <form action="https://picchutravel.com/es/" method="get" class="header-search">
-                            <input type="text" class="form-control" name="s" value="">
-                        </form>
-                    </li>
-                    <li class="dropdown dropdown-minicart">
-                        <div id="d-minicart" class="mini-cart" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="cart-caret">1</div>
-                            <i class="input-icon st-border-radius field-icon fa"><svg width="26px" height="26px"
-                                    viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-
-                                    <defs></defs>
-                                    <g id="ico_card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Group" transform="translate(1.000000, 0.000000)" stroke="#1A2B48"
-                                            stroke-width="1.5">
-                                            <g id="shopping-basket-handle">
-                                                <path
-                                                    d="M17.936,23.25 L4.064,23.25 C3.39535169,23.2378444 2.82280366,22.7675519 2.681,22.114 L0.543,13.114 C0.427046764,12.67736 0.516308028,12.2116791 0.785500181,11.8488633 C1.05469233,11.4860476 1.47449596,11.2656135 1.926,11.25 L20.074,11.25 C20.525504,11.2656135 20.9453077,11.4860476 21.2144998,11.8488633 C21.483692,12.2116791 21.5729532,12.67736 21.457,13.114 L19.319,22.114 C19.1771963,22.7675519 18.6046483,23.2378444 17.936,23.25 Z"
-                                                    id="Shape"></path>
-                                                <path d="M6.5,14.25 L6.5,20.25" id="Shape"></path>
-                                                <path d="M11,14.25 L11,20.25" id="Shape"></path>
-                                                <path d="M15.5,14.25 L15.5,20.25" id="Shape"></path>
-                                                <path d="M8,2.006 C5.190705,2.90246789 3.1556158,5.34590097 2.782,8.271"
-                                                    id="Shape"></path>
-                                                <path
-                                                    d="M19.221,8.309 C18.8621965,5.36812943 16.822685,2.90594951 14,2.006"
-                                                    id="Shape"></path>
-                                                <rect id="Rectangle-path" x="8" y="0.75" width="6" height="3"
-                                                    rx="1.125"></rect>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></i>
-                        </div>
-                        <ul class="dropdown-menu" aria-labelledby="d-minicart">
-                            <li class="heading">
-                                <h4 class="st-heading-section">Your Cart</h4>
-                            </li>
-                            <li class="cart-item">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img width="128" height="72"
-                                            src="https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco.jpg"
-                                            class="img-responsive media-object wp-post-image"
-                                            alt="tour machu picchu 1 día" loading="lazy"
-                                            srcset="https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco.jpg 1920w, https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco-600x337.jpg 600w, https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco-768x432.jpg 768w"
-                                            sizes="(max-width: 128px) 100vw, 128px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading"><a class="st-link c-main"
-                                                href="https://picchutravel.com/es/tour/machu-picchu-en-tren/">Machu
-                                                Picchu en Trenaaa</a>
-                                        </h4>
-                                        <div class="price-wrapper">Price:
-                                            <span class="price">USD 560,00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart-total">
-                                <div class="sub-total">Subtotal <span class="price"><span
-                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>560.00</bdi></span></span>
-                                </div>
-                                <a href="/es/finalizar-compra/?action=st-remove-cart&amp;security=fbf7f15a7d"
-                                    class="btn btn-danger btn-full upper">
-                                    Remove Cart </a>
-                                <a href="https://picchutravel.com/es/finalizar-compra/"
-                                    class="btn btn-green btn-full upper mt10">Check Out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div id="st-content-wrapper" class="search-result-page">
+    <div id="st-content-wrapper" class="search-result-page" style="margin-top:150px;">
         <div class="st-breadcrumb hidden-xs ">
             <div class="container">
                 <ul>
@@ -2288,7 +2157,7 @@
                                     <div class="col-left">
                                         <h5 class="booking-item-payment-title">
                                             <a href="https://picchutravel.com/es/tour/machu-picchu-en-tren/"
-                                                target="_blank">{{lugar}}</a>
+                                                target="_blank">{{lugar_turistico.nombre}}</a>
                                         </h5>
                                         <p class="room-name">
                                         </p>
@@ -2317,10 +2186,9 @@
                                     <a class="booking-item-payment-img" target="_blank"
                                         href="https://picchutravel.com/es/tour/machu-picchu-en-tren/">
                                         <img width="128" height="72"
-                                            src="https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco.jpg"
+                                            src="{{lugar_turistico.imagen.url}}"
                                             class="attachment-thumbnail size-thumbnail wp-post-image"
                                             alt="Agencia de Viajes y Turismo" loading="lazy"
-                                            srcset="https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco.jpg 1920w, https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco-600x337.jpg 600w, https://picchutravel.com/wp-content/uploads/tour-machu-picchu-en-tren-cuzco-768x432.jpg 768w"
                                             sizes="(max-width: 128px) 100vw, 128px"> </a>
                                 </header>
 
@@ -2328,26 +2196,32 @@
                                     <li>
                                         <ul class="booking-item-payment-price">
                                             <li>
-                                                <p class="booking-item-payment-price-title">Subtotal
-                                                </p>
-
-                                                <p class="booking-item-payment-price-amount"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">$</span>560.00</bdi></span>
+                                                <p class="booking-item-payment-price-title">Subtotal</p>
+                                                <p class="booking-item-payment-price-amount">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <bdi>
+                                                            <span class="woocommerce-Price-currencySymbol">$</span>
+                                                            {{lugar_turistico.costo}}
+                                                        </bdi>
+                                                    </span>
                                                 </p>
                                             </li>
-
-
-
-
-
                                         </ul>
                                     </li>
                                 </ul>
 
                                 <p class="booking-item-payment-total">Total:
-                                    <span><strong><span class="woocommerce-Price-amount amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol">$</span>560.00</bdi></span></strong>
+                                    <span>
+                                        <strong>
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">
+                                                        {{lugar_turistico.costo}}
+                                                    </span>
+                                                    $
+                                                </bdi>
+                                            </span>
+                                        </strong>
                                     </span>
                                 </p>
 
