@@ -1327,6 +1327,7 @@
         src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/intl/es_419/util.js"></script>
 </head>
 {% extends 'header.html' %}
+{%load static%}
 {% block content %}
 <body
     class="page-template-default page page-id-415  st-header-1 theme-traveler woocommerce-checkout woocommerce-page woocommerce-js wide menu_style1 wpb-js-composer js-comp-ver-6.9.0 vc_responsive"
@@ -1810,7 +1811,7 @@
                                             <div class="woocommerce-privacy-policy-text">
                                                 <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar
                                                     tu experiencia en esta web y otros propósitos descritos en nuestra
-                                                    <a href="https://picchutravel.com/es/politica-de-privacidad/"
+                                                    <a href=""
                                                         class="woocommerce-privacy-policy-link" target="_blank">política
                                                         de privacidad</a>.</p>
                                             </div>
@@ -2062,7 +2063,7 @@
                                                         name="terms" id="terms">
                                                     <span class="woocommerce-terms-and-conditions-checkbox-text">He
                                                         leído y estoy de acuerdo con los <a
-                                                            href="https://picchutravel.com/es/terminos-y-condiciones/"
+                                                            href=""
                                                             class="woocommerce-terms-and-conditions-link"
                                                             target="_blank">términos y condiciones</a> de la
                                                         web</span>&nbsp;<abbr class="required"
@@ -2071,87 +2072,14 @@
                                                 <input type="hidden" name="terms-field" value="1">
                                             </p>
                                         </div>
-
-
-                                        <button type="submit" class="button alt" name="woocommerce_checkout_place_order"
-                                            id="place_order" value="Realizar el pedido" data-value="Realizar el pedido"
-                                            style="display: none !important;">Realizar el pedido</button>
-
-                                        <input type="hidden" id="woocommerce-process-checkout-nonce"
-                                            name="woocommerce-process-checkout-nonce" value="30b99154fc"><input
-                                            type="hidden" name="_wp_http_referer"
-                                            value="/es/?wc-ajax=update_order_review">
-                                    </div>
-                                </div>
-
-                                <div class="ppc-button-wrapper" style="position: static; zoom: 1;">
-                                    <div id="ppc-button-ppcp-gateway">
-                                        <div id="zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc"
-                                            class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-paypal paypal-buttons-layout-vertical"
-                                            data-paypal-smart-button-version="5.0.327"
-                                            style="height: 142px; transition: all 0.2s ease-in-out 0s;">
-                                            <style nonce="">
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc {
-                                                    position: relative;
-                                                    display: inline-block;
-                                                    width: 100%;
-                                                    min-height: 35px;
-                                                    min-width: 200px;
-                                                    max-width: 750px;
-                                                    font-size: 0;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>iframe {
-                                                    position: absolute;
-                                                    top: 0;
-                                                    left: 0;
-                                                    width: 100%;
-                                                    height: 100%;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>iframe.component-frame {
-                                                    z-index: 100;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>iframe.prerender-frame {
-                                                    transition: opacity .2s linear;
-                                                    z-index: 200;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>iframe.visible {
-                                                    opacity: 1;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>iframe.invisible {
-                                                    opacity: 0;
-                                                    pointer-events: none;
-                                                }
-
-                                                #zoid-paypal-buttons-uid_524fc451bc_mdq6ndi6mjc>.smart-menu {
-                                                    position: absolute;
-                                                    z-index: 300;
-                                                    top: 0;
-                                                    left: 0;
-                                                    width: 100%;
-                                                }
-                                            </style><iframe allowtransparency="true"
-                                                name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9waWNjaHV0cmF2ZWwuY29tIn0sIm1ldGFEYXRhIjp7IndpbmRvd1JlZiI6eyJ0eXBlIjoicGFyZW50IiwiZGlzdGFuY2UiOjB9fSwicmVmZXJlbmNlIjp7InR5cGUiOiJyYXciLCJ2YWwiOiJ7XCJ1aWRcIjpcInpvaWQtcGF5cGFsLWJ1dHRvbnMtdWlkXzUyNGZjNDUxYmNfbWRxNm5kaTZtamNcIixcImNvbnRleHRcIjpcImlmcmFtZVwiLFwidGFnXCI6XCJwYXlwYWwtYnV0dG9uc1wiLFwiY2hpbGREb21haW5NYXRjaFwiOntcIl9fdHlwZV9fXCI6XCJyZWdleFwiLFwiX192YWxfX1wiOlwiXFxcXC5wYXlwYWxcXFxcLihjb218Y24pKDpcXFxcZCspPyRcIn0sXCJ2ZXJzaW9uXCI6XCIxMF8xXzBcIixcInByb3BzXCI6e1wic3R5bGVcIjp7XCJjdXN0b21cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibGFiZWxcIjpcInBheXBhbFwiLFwibGF5b3V0XCI6XCJ2ZXJ0aWNhbFwiLFwiY29sb3JcIjpcImdvbGRcIixcInNoYXBlXCI6XCJyZWN0XCIsXCJ0YWdsaW5lXCI6ZmFsc2UsXCJoZWlnaHRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGVyaW9kXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm1lbnVQbGFjZW1lbnRcIjpcImJlbG93XCJ9LFwiY3JlYXRlT3JkZXJcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83NzJiMGUzMmNkX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJjcmVhdGVPcmRlclwifX0sXCJvbkFwcHJvdmVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zOTBlNmVhZTQzX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJvbkFwcHJvdmVcIn19LFwib25DYW5jZWxcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9lNDY1NTQ5MjJhX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJvbkNhbmNlbFwifX0sXCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMTlkZWZhNGI1Zl9tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwib25TbWFydEJ1dHRvbkNsaWNrXCJ9fSxcIm9uSW5pdFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2I5OWI4ODQxMDNfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcIm9uSW5pdFwifX0sXCJjc3BOb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nU291cmNlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0b3JhZ2VTdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2I4NmM5ZGI4YzdfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zMTcwNDFkNmFlX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcInNlc3Npb25TdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzJlZDg2NjViMmZfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9hYzU4NTNlOWRhX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcImNvbXBvbmVudHNcIjpbXCJidXR0b25zXCIsXCJmdW5kaW5nLWVsaWdpYmlsaXR5XCJdLFwibG9jYWxlXCI6e1wiY291bnRyeVwiOlwiVVNcIixcImxhbmdcIjpcImVzXCJ9LFwiY3JlYXRlQmlsbGluZ0FncmVlbWVudFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjcmVhdGVTdWJzY3JpcHRpb25cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25Db21wbGV0ZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdBZGRyZXNzQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdPcHRpb25zQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80Yjg1ZWQzNzAxX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFBvcHVwQnJpZGdlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNjdkNjhlMmI3Ml9tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwiZ2V0UG9wdXBCcmlkZ2VcIn19LFwiZ2V0UXVlcmllZEVsaWdpYmxlRnVuZGluZ1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzg3MDA1NTJmNTVfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIn19LFwiY2xpZW50SURcIjpcIkFmeHgxWk9IQkl0NjNGSWZxcE45aFMtUUZXdUdwbXMwRXUyNmFvNDJLY3dOc3l4RkxKVmh5ekZTcHU1VXlyVjZmbTRxeG9kX3pORWpZVXJPXCIsXCJjbGllbnRBY2Nlc3NUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXJ0bmVyQXR0cmlidXRpb25JRFwiOlwiV29vX1BQQ1BcIixcIm1lcmNoYW50UmVxdWVzdGVkUG9wdXBzRGlzYWJsZWRcIjpmYWxzZSxcImVuYWJsZVRocmVlRG9tYWluU2VjdXJlXCI6ZmFsc2UsXCJzZGtDb3JyZWxhdGlvbklEXCI6XCJmNjQwODAzYzdkOWE0XCIsXCJzdG9yYWdlSURcIjpcInVpZF81ZjJhNzRlOTUyX21kbTZtZGU2bXR5XCIsXCJzZXNzaW9uSURcIjpcInVpZF8xNmJkM2MxZDVlX21kcTZtenk2bWphXCIsXCJidXR0b25TZXNzaW9uSURcIjpcInVpZF9jYzhjMDdiZGEwX21kcTZuZGk2bWpjXCIsXCJlbmFibGVWYXVsdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJlbnZcIjpcInByb2R1Y3Rpb25cIixcImFtb3VudFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJzdGFnZUhvc3RcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYnV0dG9uU2l6ZVwiOlwiaHVnZVwiLFwiYXBpU3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZ1bmRpbmdFbGlnaWJpbGl0eVwiOntcInBheXBhbFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOmZhbHNlfSxcInBheWxhdGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInByb2R1Y3RzXCI6e1wicGF5SW4zXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfSxcInBheUluNFwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlsYXRlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH19fSxcImNhcmRcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJicmFuZGVkXCI6dHJ1ZSxcImluc3RhbGxtZW50c1wiOmZhbHNlLFwidmVuZG9yc1wiOntcInZpc2FcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjp0cnVlfSxcIm1hc3RlcmNhcmRcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImFtZXhcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImRpc2NvdmVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiaGlwZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6ZmFsc2V9LFwiZWxvXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiamNiXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOnRydWV9fSxcImd1ZXN0RW5hYmxlZFwiOmZhbHNlfSxcInZlbm1vXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJpdGF1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJjcmVkaXRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImFwcGxlcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzZXBhXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJpZGVhbFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYmFuY29udGFjdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZ2lyb3BheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiZXBzXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJzb2ZvcnRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm15YmFua1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicDI0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ6aW1wbGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ3ZWNoYXRwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInBheXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJsaWtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInRydXN0bHlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm94eG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm1heGltYVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYm9sZXRvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJib2xldG9iYW5jYXJpb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibWVyY2Fkb3BhZ29cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm11bHRpYmFuY29cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfX0sXCJwbGF0Zm9ybVwiOlwiZGVza3RvcFwiLFwicmVtZW1iZXJlZFwiOltdLFwiZXhwZXJpbWVudFwiOntcImVuYWJsZVZlbm1vXCI6ZmFsc2UsXCJlbmFibGVWZW5tb0FwcExhYmVsXCI6ZmFsc2V9LFwicGF5bWVudFJlcXVlc3RcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZmxvd1wiOlwicHVyY2hhc2VcIixcInJlbWVtYmVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfOGRmZWRmMjJiMV9tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwicmVtZW1iZXJcIn19LFwiY3VycmVuY3lcIjpcIlVTRFwiLFwiaW50ZW50XCI6XCJjYXB0dXJlXCIsXCJidXllckNvdW50cnlcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY29tbWl0XCI6dHJ1ZSxcInZhdWx0XCI6ZmFsc2UsXCJlbmFibGVGdW5kaW5nXCI6W1widmVubW9cIixcInBheWxhdGVyXCJdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVDYXJkXCI6W10sXCJtZXJjaGFudElEXCI6W10sXCJyZW5kZXJlZEJ1dHRvbnNcIjpbXCJwYXlwYWxcIixcImNhcmRcIl0sXCJjc3BcIjp7XCJub25jZVwiOlwiXCJ9LFwibm9uY2VcIjpcIlwiLFwiZ2V0UGFnZVVybFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2VkZjY3NGMwN2NfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImdldFBhZ2VVcmxcIn19LFwidXNlcklEVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY2xpZW50TWV0YWRhdGFJRFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJkZWJ1Z1wiOmZhbHNlLFwidGVzdFwiOntcImFjdGlvblwiOlwiY2hlY2tvdXRcIn0sXCJ3YWxsZXRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZE5vbmNlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBheW1lbnRNZXRob2RUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJicmFuZGVkXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5U3VwcG9ydFwiOmZhbHNlLFwic3VwcG9ydHNQb3B1cHNcIjp0cnVlLFwic3VwcG9ydGVkTmF0aXZlQnJvd3NlclwiOmZhbHNlLFwidXNlckV4cGVyaWVuY2VGbG93XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwcGxlUGF5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImV4cGVyaWVuY2VcIjpcIlwiLFwiYWxsb3dCaWxsaW5nUGF5bWVudHNcIjp0cnVlfSxcImV4cG9ydHNcIjp7XCJpbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNWE4ZWM5NWJmZF9tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwiaW5pdFwifX0sXCJjbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2IyNWM1OWZkYzVfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImNsb3NlOjptZW1vaXplZFwifX0sXCJjaGVja0Nsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNzNhMTdmYmQ4Y19tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwiY2hlY2tDbG9zZVwifX0sXCJyZXNpemVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yMmFlODU5NTQzX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJQZVwifX0sXCJvbkVycm9yXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDNkZDVlNDI5YV9tZHE2bmRpNm1qY1wiLFwibmFtZVwiOlwiRGVcIn19LFwic2hvd1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2MyNjhjY2Y3OGJfbWRxNm5kaTZtamNcIixcIm5hbWVcIjpcImhlXCJ9fSxcImhpZGVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF82ZWM2YmUwYWJhX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJtZVwifX0sXCJleHBvcnRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8xNzFlM2RhZjdlX21kcTZuZGk2bWpjXCIsXCJuYW1lXCI6XCJIZVwifX19fSJ9fQ__"
-                                                title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no"
-                                                id="jsx-iframe-7ff4610125" class="component-frame visible"
-                                                style="background-color: transparent; border: none;"></iframe>
-                                            <div id="smart-menu" class="smart-menu"></div>
-                                            <div id="installments-modal" class="installments-modal"></div><iframe
-                                                name="__detect_close_uid_177d063372_mdq6ndi6mjc__"
-                                                style="display: none;"></iframe>
-                                        </div>
+                                        <div class="button book_button trans_200"><a href="">Realizar Pedido</a></div>
+                                          
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <h2 class="st-woo-heading">Your Booking</h2>
-
-
+                            <h2 class="st-woo-heading">Tu Selección</h2>
                             <div class="woocommerce-checkout-review-order-table booking-item-payment">
                                 <header class="clearfix">
                                     <div class="col-left">
@@ -2230,394 +2158,151 @@
                         </div>
                     </div>
                 </form>
-
-
-
             </div>
         </div>
     </div>
-    <footer id="main-footer" class="clearfix  ">
-        <div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-stretch-content="true"
-            class="vc_row wpb_row st bg-holder vc_custom_1603058305223 vc_row-has-fill vc_row-no-padding"
-            style="position: relative; left: 15px; box-sizing: border-box; width: 881px; max-width: 881px;">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="wpb_column column_container col-md-12">
-                        <div class="vc_column-inner wpb_wrapper">
-                            <div class="mailchimp">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-                                            <div class="row">
-                                                <div class="col-xs-12  col-md-7 col-lg-6">
-                                                    <div class="media ">
-                                                        <div class="media-left pr30 hidden-xs">
-                                                            <img class="media-object st_1660192940"
-                                                                src="https://picchutravel.com/wp-content/uploads/ico_email_subscribe.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h4 class="media-heading st-heading-section f24">Suscríbete
-                                                                a Nuestro Newsletter</h4>
-                                                            <p class="f16 c-grey">Promociones y Ofertas de Viajes</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-md-5 col-lg-6">
-                                                    <script>(function () {
-                                                            window.mc4wp = window.mc4wp || {
-                                                                listeners: [],
-                                                                forms: {
-                                                                    on: function (evt, cb) {
-                                                                        window.mc4wp.listeners.push(
-                                                                            {
-                                                                                event: evt,
-                                                                                callback: cb
-                                                                            }
-                                                                        );
-                                                                    }
-                                                                }
-                                                            }
-                                                        })();
-                                                    </script><!-- Mailchimp for WordPress v4.8.7 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                                                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-73"
-                                                        method="post" data-id="73" data-name="Español">
-                                                        <div class="mc4wp-form-fields">
-                                                            <div class="subcribe-form">
-                                                                <div class="form-group">
-                                                                    <input type="email" name="EMAIL"
-                                                                        class="form-control"
-                                                                        placeholder="Correo electrónico">
-                                                                    <input type="submit" name="submit"
-                                                                        value="Suscribirse">
-                                                                </div>
-                                                            </div>
+    <footer class="footer">
+		<div class="container">
+			<div class="row">
 
+				<!-- Footer Column -->
+				<div class="col-lg-3 footer_column">
+					<div class="footer_col">
+						<div class="footer_content footer_about">
+							<div class="logo_container footer_logo">
+								<div class="logo"><a href="#"><img src="{% static 'images/LogoAlojaTravelsBlanco.png' %}" alt=""></a></div>
+							</div>
+							<p class="footer_about_text">Conoce el Perú con nosotros y vive experiencias inolvidables con los tours que tenemos para ti.</p>
+							<ul class="footer_social_list">
+								<li class="footer_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li class="footer_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
+				<!-- Footer Column -->
+				<div class="col-lg-3 footer_column">
+					<div class="footer_col">
+						<div class="footer_title">últimas noticias</div>
+						<div class="footer_content footer_blog">
+							
+							<!-- Footer blog item -->
+							<div class="footer_blog_item clearfix">
+								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_1.jpg' %}" alt="https://unsplash.com/@avidenov"></div>
+								<div class="footer_blog_content">
+									<div class="footer_blog_title"><a href="/blog">Nuevos Tours 2022</a></div>
+									<div class="footer_blog_date">May 29, 2022</div>
+								</div>
+							</div>
+							
+							<!-- Footer blog item -->
+							<div class="footer_blog_item clearfix">
+								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_2.jpg' %}" alt="https://unsplash.com/@deannaritchie"></div>
+								<div class="footer_blog_content">
+									<div class="footer_blog_title"><a href="/blog">Nuevos destinos para ti</a></div>
+									<div class="footer_blog_date">Nov 29, 2021</div>
+								</div>
+							</div>
 
+							<!-- Footer blog item -->
+							<div class="footer_blog_item clearfix">
+								<div class="footer_blog_image"><img src="{% static 'images/footer_blog_3.jpg' %}" alt="https://unsplash.com/@bergeryap87"></div>
+								<div class="footer_blog_content">
+									<div class="footer_blog_title"><a href="/t_blog">Planes Máncora 2021</a></div>
+									<div class="footer_blog_date">Jul 28, 2021</div>
+								</div>
+							</div>
 
+						</div>
+					</div>
+				</div>
 
+				<!-- Footer Column -->
+				<div class="col-lg-3 footer_column">
+					<div class="footer_col">
+						<div class="footer_title">etiquetas</div>
+						<div class="footer_content footer_tags">
+							<ul class="tags_list clearfix">
+								<li class="tag_item"><a href="#">viajes</a></li>
+								<li class="tag_item"><a href="#">tours</a></li>
+								<li class="tag_item"><a href="#">aventura</a></li>
+								<li class="tag_item"><a href="#">playa</a></li>
+								<li class="tag_item"><a href="#">museo</a></li>
+								<li class="tag_item"><a href="#">selva</a></li>
+								<li class="tag_item"><a href="#">festividades</a></li>
+								<li class="tag_item"><a href="#">sierra</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
+				<!-- Footer Column -->
+				<div class="col-lg-3 footer_column">
+					<div class="footer_col">
+						<div class="footer_title">datos de contacto</div>
+						<div class="footer_content footer_contact">
+							<ul class="contact_info_list">
+								<li class="contact_info_item d-flex flex-row">
+									<div><div class="contact_info_icon"><img src="{% static 'images/placeholder.svg' %}" alt=""></div></div>
+									<div class="contact_info_text">Jr.Junin #646 - El Tambo</div>
+								</li>
+								<li class="contact_info_item d-flex flex-row">
+									<div><div class="contact_info_icon"><img src="{% static 'images/phone-call.svg' %}" alt=""></div></div>
+									<div class="contact_info_text">990-555-921</div>
+								</li>
+								<li class="contact_info_item d-flex flex-row">
+									<div><div class="contact_info_icon"><img src="{% static 'images/message.svg' %}" alt=""></div></div>
+									<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">info@alojatravels.com</a></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
+			</div>
+		</div>
+	</footer>
+    <div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 order-lg-1 order-2  ">
+					<div class="copyright_content d-flex flex-row align-items-center">
+						<div>
+							Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+								</script> por Aloja Travels 
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 order-lg-2 order-1">
+					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+						<div class="footer_nav">
+							<ul class="footer_nav_list">
+								<li class="footer_nav_item"><a href="#">INICIO</a></li>
+								<li class="footer_nav_item"><a href="/about">NOSOTROS</a></li>
+								<li class="footer_nav_item"><a href="/offers">VIAJES</a></li>
+								<li class="footer_nav_item"><a href="/blog">NOTICIAS</a></li>
+								<li class="footer_nav_item"><a href="/contact">CONTÁCTANOS</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-                                                        </div><label style="display: none !important;">Deja vacío este
-                                                            campo si eres humano: <input type="text"
-                                                                name="_mc4wp_honeypot" value="" tabindex="-1"
-                                                                autocomplete="off"></label><input type="hidden"
-                                                            name="_mc4wp_timestamp" value="1660192945"><input
-                                                            type="hidden" name="_mc4wp_form_id" value="73"><input
-                                                            type="hidden" name="_mc4wp_form_element_id"
-                                                            value="mc4wp-form-1">
-                                                        <div class="mc4wp-response"></div>
-                                                    </form><!-- / Mailchimp for WordPress Plugin -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End .row-->
-            </div>
-            <!--End .container-->
-        </div>
-        <div class="vc_row-full-width vc_clearfix"></div>
-        <div class="vc_row wpb_row st bg-holder">
-            <div class="container ">
-                <div class="row">
-                    <div class="wpb_column column_container col-md-12">
-                        <div class="vc_column-inner wpb_wrapper">
-                            <div class="vc_empty_space" style="height: 50px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End .row-->
-            </div>
-            <!--End .container-->
-        </div>
-        <div data-vc-full-width="true" data-vc-full-width-init="true"
-            class="vc_row wpb_row st bg-holder vc_custom_1542265299369 vc_row-has-fill"
-            style="position: relative; left: 15px; box-sizing: border-box; width: 881px; max-width: 881px; padding-left: 0px; padding-right: 0px;">
-            <div class="container ">
-                <div class="row">
-                    <div class="wpb_column column_container col-md-3">
-                        <div class="vc_column-inner wpb_wrapper">
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1547257068895">
-                                <div class="wpb_wrapper">
-                                    <h4 style="font-size: 14px;">¿NECESITAS AYUDA?</h4>
-
-                                </div>
-                            </div>
-                            <div
-                                class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_40 vc_sep_pos_align_left vc_separator_no_text">
-                                <span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span><span
-                                    class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1576203499755">
-                                <div class="wpb_wrapper">
-                                    <p><span style="color: #5e6d77;">WhatsApp</span></p>
-                                    <h5><a href="https://api.whatsapp.com/send?phone=51984010084">+51 984 010 084</a>
-                                    </h5>
-
-                                </div>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1576203514037">
-                                <div class="wpb_wrapper">
-                                    <p><span style="color: #5e6d77;">Correo</span></p>
-                                    <h5><a href="mailto:info@picchutravel.com">info@picchutravel.com</a></h5>
-
-                                </div>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1603551741929">
-                                <div class="wpb_wrapper">
-                                    <p><span style="color: #5e6d77; margin-bottom: 5px;">Síguenos en<br>
-                                        </span></p>
-                                    <p><a style="margin-right: 20px;" href="https://web.facebook.com/PicchuTravel"
-                                            target="_blank" rel="noopener noreferrer"><img loading="lazy"
-                                                class="alignnone wp-image-7794 size-full"
-                                                src="https://picchutravel.com/wp-content/uploads/facebook.png"
-                                                alt="tour a machu picchu" width="25" height="25"></a><a
-                                            style="margin-right: 20px;" href="https://www.instagram.com/picchutravel/"
-                                            target="_blank" rel="noopener noreferrer"><img loading="lazy"
-                                                class="alignnone wp-image-7794 size-full"
-                                                src="https://picchutravel.com/wp-content/uploads/instagram.png"
-                                                alt="tour a machu picchu" width="25" height="25"></a><a
-                                            style="margin-right: 20px;" href="https://www.tiktok.com/@picchutravel"
-                                            target="_blank" rel="noopener noreferrer"><img loading="lazy"
-                                                class="alignnone wp-image-7794 size-full"
-                                                src="https://picchutravel.com/wp-content/uploads/tik-tok.png"
-                                                alt="tour a machu picchu" width="25" height="25"></a></p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wpb_column column_container col-md-3">
-                        <div class="vc_column-inner wpb_wrapper">
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1547317490702">
-                                <div class="wpb_wrapper">
-                                    <h4 style="font-size: 14px;">MENU</h4>
-
-                                </div>
-                            </div>
-                            <div
-                                class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_40 vc_sep_pos_align_left vc_separator_no_text">
-                                <span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span><span
-                                    class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="widget widget_nav_menu">
-                                <ul id="menu-menu-2" class="menu">
-                                    <li
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-346">
-                                        <a href="https://picchutravel.com/es/">Inicio</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
-                                        <a href="https://picchutravel.com/es/tours/">Tours</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350">
-                                        <a href="https://picchutravel.com/es/nosotros/">Nosotros</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-343">
-                                        <a href="https://picchutravel.com/es/contactanos/">Contáctanos</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630">
-                                        <a href="https://picchutravel.com/es/blog/">Blog</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wpb_column column_container col-md-3">
-                        <div class="vc_column-inner wpb_wrapper">
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1547317634961">
-                                <div class="wpb_wrapper">
-                                    <h4 style="font-size: 14px;">PARTNER</h4>
-
-                                </div>
-                            </div>
-                            <div
-                                class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_40 vc_sep_pos_align_left vc_separator_no_text">
-                                <span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span><span
-                                    class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                <div class="wpb_wrapper">
-                                    <div id="TA_selfserveprop537" class="TA_selfserveprop">
-                                        <div id="CDSWIDSSP" class="widSSP widSSPnarrow" style="width: 240px;"> <a
-                                                class="widSSPClickWrap" target="_blank"
-                                                href="https://www.tripadvisor.com.mx/Attraction_Review-g294314-d15322005-Reviews-Picchu_Travel-Cusco_Cusco_Region.html"
-                                                onclick="ta.cds.handleTALink(11900,this);return true;"></a>
-                                            <div class="widSSPData  withBorder   cx_brand_refresh ">
-                                                <div class="widSSPBranding">
-                                                    <dl>
-                                                        <dt> <a target="_blank"
-                                                                href="https://www.tripadvisor.com.mx/"><img
-                                                                    src="https://www.tripadvisor.com.mx/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-11900-2.svg"
-                                                                    alt="TripAdvisor" class="logo"></a> </dt>
-                                                    </dl>
-                                                </div>
-                                                <!--/ cdsBranding-->
-                                                <div class="widSSPComponent">
-                                                    <div class="widSSPSummary">
-                                                        <dl> <a target="_blank"
-                                                                href="https://www.tripadvisor.com.mx/Attraction_Review-g294314-d15322005-Reviews-Picchu_Travel-Cusco_Cusco_Region.html"
-                                                                onclick="ta.cds.handleTALink(11900,this);return true;"
-                                                                rel="nofollow">
-                                                                <dt class="widSSPH18">Picchu Travel</dt>
-                                                            </a> </dl>
-                                                    </div>
-                                                    <!--/ cdsSummary-->
-                                                </div>
-                                                <!--/ cdsComponent-->
-                                                <div class="widSSPComponent widSSPOptional">
-                                                    <dl class="widSSPReviews">
-                                                        <dt class="widSSPH11">Opiniones recientes de los viajeros</dt>
-                                                        <dd class="widSSPOneReview">
-                                                            <ul class="widSSPBullet">
-                                                                <li> <span class="widSSPQuote">“La mejor experiencia en
-                                                                        Cusci”</span> </li>
-                                                                <li> <span class="widSSPQuote">“Excelente
-                                                                        servicio”</span> </li>
-                                                                <li> <span class="widSSPQuote">“Maravilloso”</span>
-                                                                </li>
-                                                                <li> <span class="widSSPQuote">“Excelente!!!”</span>
-                                                                </li>
-                                                            </ul>
-                                                            <!--/ bullet-->
-                                                        </dd>
-                                                        <!--/ hReview-->
-                                                    </dl>
-                                                </div>
-                                                <div class="widSSPAll">
-                                                    <ul class="widSSPReadReview">
-                                                        <li><a href="https://www.tripadvisor.com.mx/Attraction_Review-g294314-d15322005-Reviews-Picchu_Travel-Cusco_Cusco_Region.html"
-                                                                id="allreviews"
-                                                                onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
-                                                                rel="nofollow">Lee opiniones</a></li>
-                                                    </ul>
-                                                    <ul class="widSSPWriteReview">
-                                                        <li><a href="https://www.tripadvisor.com.mx/UserReview-g294314-d15322005-Picchu_Travel-Cusco_Cusco_Region.html"
-                                                                id="writereview"
-                                                                onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
-                                                                rel="nofollow">Escribe una opinión</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!--/ cdsAll-->
-                                            </div>
-                                            <!--/ cdsData-->
-                                        </div>
-                                        <!--/ CDSPOP.cdsBx-->
-                                    </div>
-                                    <script async=""
-                                        src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=537&amp;locationId=15322005&amp;lang=es_MX&amp;rating=false&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=false&amp;iswide=false&amp;border=true&amp;display_version=2"
-                                        data-loadtrk="" onload="this.loadtrk=true"></script>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wpb_column column_container col-md-3">
-                        <div class="vc_column-inner wpb_wrapper">
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1547317600624">
-                                <div class="wpb_wrapper">
-                                    <h4 style="font-size: 14px;">AJUSTE</h4>
-
-                                </div>
-                            </div>
-                            <div
-                                class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_40 vc_sep_pos_align_left vc_separator_no_text">
-                                <span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span><span
-                                    class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#eaeaea;"
-                                        class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="form-group">
-                                <label class="block f14 c-grey font-normal">Languages</label>
-                                <select name="language" class="f14 select2-languages select2-hidden-accessible"
-                                    tabindex="-1" aria-hidden="true">
-                                    <option value="Español" selected=""
-                                        data-target="https://picchutravel.com/es/finalizar-compra/">Español</option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                                    style="width: 57px;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" aria-haspopup="true"
-                                            aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-language-lc-container" role="combobox"><span
-                                                class="select2-selection__rendered" id="select2-language-lc-container"
-                                                role="textbox" aria-readonly="true" title="Español">Español</span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            </div>
-                            <div class="form-group mt30">
-                                <label class="block f14 c-grey font-normal">Currencies</label>
-                                <select name="currency" class="f14 select2-currencies select2-hidden-accessible"
-                                    tabindex="-1" aria-hidden="true">
-                                    <option selected="selected" value="USD"
-                                        data-target="/es/finalizar-compra/?currency=USD">USD</option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                                    style="width: 30px;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" aria-haspopup="true"
-                                            aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-currency-ml-container" role="combobox"><span
-                                                class="select2-selection__rendered" id="select2-currency-ml-container"
-                                                role="textbox" aria-readonly="true" title="USD">USD</span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            </div>
-
-                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                <div class="wpb_wrapper">
-                                    <h6><a href="https://picchutravel.com/es/terminos-y-condiciones/">Términos y
-                                            Condiciones</a></h6>
-                                    <h6><a href="https://picchutravel.com/es/politica-de-privacidad/">Política de
-                                            Privacidad</a></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End .row-->
-            </div>
-            <!--End .container-->
-        </div>
-        <div class="vc_row-full-width vc_clearfix"></div>
-    </footer>
-    <div class="container main-footer-sub">
-        <div class="st-flex space-between">
-            <div class="left mt20">
-                <div class="f14">
-                    Copyright © 2022 by <a href="https://picchutravel.com/es/" class="st-link">Picchu Travel</a>
-                </div>
-            </div>
-            <div class="right mt20">
-                <img src="https://picchutravel.com/wp-content/uploads/payment-method-machu-picchu.png" alt=""
-                    class="img-responsive st_1660192941">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade login-regiter-popup" id="st-login-form" tabindex="-1" role="dialog">
+    <div class="modal fade login-regiter-popup" id="st-login-form" tabindex="1" role="dialog">
         <div class="modal-dialog" role="document" style="max-width: 450px;">
             <div class="modal-content relative">
                 <div class="loader-wrapper">
                     <div class="st-loader"></div>
                 </div>
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Open">
                         <i class="input-icon st-border-radius field-icon fa"><svg width="24px" height="24px"
                                 viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -3128,9 +2813,9 @@
     <script type="text/javascript"
         src="https://picchutravel.com/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=6.8.0"
         id="wc-password-strength-meter-js"></script>
-    <script type="text/javascript"
+    <!-- <script type="text/javascript"
         src="https://picchutravel.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.8.0"
-        id="jquery-blockui-js"></script>
+        id="jquery-blockui-js"></script> -->
     <script type="text/javascript"
         src="https://picchutravel.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.8.0"
         id="js-cookie-js"></script>
