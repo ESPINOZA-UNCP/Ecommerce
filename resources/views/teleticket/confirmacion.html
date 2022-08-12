@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="es"><!--<![endif]-->
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://cdn.teleticket.com.pe/images/favicon.png">
+    <link rel="SHORTCUT ICON" href="https://cdn.teleticket.com.pe/images/favicon.png">
+    
+    
+    <title>Confirmar</title>
+    <meta name="description" content="Teleticket.com.pe - Tu entrada a los mejores eventos">
+    <meta property="fb:app_id" content="185751294773934">
+    <meta property="og:type" content="website">
+    
+    
+        <meta property="og:title" content="Confirmar">
+        <meta property="og:url" content="https://tlk-compra.azurewebsites.net/Compra/Confirmar">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@teleticket">
+    <meta name="twitter:creator" content="@teleticket">
+    <meta name="twitter:domain" content="www.teleticket.com.pe">
+    
+    <meta name="twitter:title" content="Teleticket.com.pe - Tu entrada a los mejores eventos">
+    <meta name="twitter:description" content="Encuentra entradas para los mejores eventos en Perú en Teleticket: conciertos, eventos deportivos, festivales, espectáculos teatrales y mucho más.">
+        <meta name="google-site-verification" content="wdoyTY41EmGZxuYc-AW5fcE7Si406XPxvjeLxGeciFk">
+    
+        <link rel="stylesheet" href="https://cdn.puntoticket.com/css/vex.combined.min.css">
+        <link rel="stylesheet" href="https://cdn.puntoticket.com/assets/jquery-editable/1.5.1/css/jquery-editable.css">
+    
+    
+        <script src="https://connect.facebook.net/signals/config/379755359254374?v=2.9.66&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-NGCVQ4BVL7&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" src="https://unpkg.com/transbank-onepay-frontend-sdk@1/lib/merchant.onepay.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MZ7NPMW"></script><script>   var dataLayer = window.dataLayer = window.dataLayer || [];  </script>  <!-- Google Tag Manager -->  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MZ7NPMW');</script>  <!-- End Google Tag Manager -->
+        
+        <link rel="stylesheet" href="https://cdnp.teleticket.com.pe/Content/css/normalize.css?v=20181212">
+        <link rel="stylesheet" href="https://cdnp.teleticket.com.pe/Content/css/main-tlk.css?v=20181212">
+        <link rel="stylesheet" href="https://cdnp.teleticket.com.pe/Content/css/interna-tlk.css?v=20181212">
+        <link rel="stylesheet" href="https://cdnp.teleticket.com.pe/Content/css/switch-site-tlk.css?v=20181212">
+        <link rel="stylesheet" href="https://cdnp.teleticket.com.pe/Content/css/media-tlk.css?v=20181212">
+    
+        <script src="https://cdnp.teleticket.com.pe/Content/js/jquery.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lt IE 7]>
+                    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=f6a9541a-d5b8-46e9-a65c-62e30a1e4fd6"></script>
+        <!-- End of Teleticket Zendesk Widget script -->
+        <script>
+            zE(function () {
+                $zopim(function () {
+                    $zopim.livechat.departments.setVisitorDepartment('Teleticket');
+                    $zopim.livechat.departments.filter('');
+                });
+            });
+        </script>
+        <script type="text/JavaScript">
+            window.zESettings = {
+                webWidget: {
+                    chat: {
+                        suppress: false
+                    },
+                    helpCenter: {
+                        suppress: true
+                    },
+                    contactForm: {
+                        suppress: true
+                    },
+                    color: {
+                        theme: '#AD201A'
+                    }
+                }
+            };
+        </script>
+    
+        
+        <script type="text/javascript">
+            var appInsights=window.appInsights||function(config)
+            {
+                function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+                var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o),s}),t
+            }({
+                instrumentationKey:"b0884441-fb90-40a6-b458-659a9b51943c"
+            });
+    
+            window.appInsights=appInsights;
+            appInsights.trackPageView();
+        </script><script src="//az416426.vo.msecnd.net/scripts/a/ai.0.js"></script>
+    <style type="text/css">.fancybox-margin{margin-right:0px;}</style><style type="text/css">.onepay-overlay {
+        position: absolute;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: 1ms opacity ease;
+        -moz-transition: 1ms opacity ease;
+        -ms-transition: 1ms opacity ease;
+        -o-transition: 1ms opacity ease;
+        transition: 1ms opacity ease;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.6)
+    }
+    .onepay-overlay.onepay-open {
+        opacity: 1
+    }
+    .onepay-overlay.fade-and-drop {
+        display: block;
+        opacity: 0;
+        -webkit-transition: 500ms opacity ease;
+        -moz-transition: 500ms opacity ease;
+        -ms-transition: 500ms opacity ease;
+        -o-transition: 500ms opacity ease;
+        transition: 500ms opacity ease
+    }
+    .onepay-overlay.fade-and-drop.onepay-open {
+        top: 0;
+        opacity: 1;
+        -webkit-transition: 500ms opacity ease;
+        -moz-transition: 500ms opacity ease;
+        -ms-transition: 500ms opacity ease;
+        -o-transition: 500ms opacity ease;
+        transition: 500ms opacity ease
+    }
+    .onepay-modal {
+        position: absolute;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        width: 94%;
+        opacity: 0;
+        -webkit-transition: 1ms opacity ease;
+        -moz-transition: 1ms opacity ease;
+        -ms-transition: 1ms opacity ease;
+        -o-transition: 1ms opacity ease;
+        transition: 1ms opacity ease;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+        background: #fff;
+        text-align: center
+    }
+    .onepay-modal.onepay-open {
+        opacity: 1
+    }
+    .onepay-modal.onepay-open.onepay-anchored {
+        top: 20px;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0)
+    }
+    .onepay-modal.fade-and-drop {
+        top: -300%;
+        opacity: 1;
+        display: block;
+        -webkit-transition: 500ms top 500ms ease;
+        -moz-transition: 500ms top 500ms ease;
+        -ms-transition: 500ms top 500ms ease;
+        -o-transition: 500ms top 500ms ease;
+        transition: 500ms top 500ms ease
+    }
+    .onepay-modal.fade-and-drop.onepay-open {
+        top: 50%;
+        -webkit-transition: 500ms top 500ms ease;
+        -moz-transition: 500ms top 500ms ease;
+        -ms-transition: 500ms top 500ms ease;
+        -o-transition: 500ms top 500ms ease;
+        transition: 500ms top 500ms ease
+    }
+    .onepay-modal.fade-and-drop.onepay-open.onepay-anchored {
+        -webkit-transition: 500ms top 500ms ease;
+        -moz-transition: 500ms top 500ms ease;
+        -ms-transition: 500ms top 500ms ease;
+        -o-transition: 500ms top 500ms ease;
+        transition: 500ms top 500ms ease
+    }
+    .onepay-content {
+        background-color: #f7f7f7;
+        width: 750px;
+        height: 520px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        display: block;
+        border: 0;
+        margin: 0
+    }
+    .onepay-centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+    </style></head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ7NPMW"  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  <!-- End Google Tag Manager (noscript) -->
+        
+        <div canvas="container" id="content">
+                <header class="menu navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    
+    
+                    <div class="container">
+                        <div class="navbar-header">
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-8 logo">
+                            <a href="https://teleticket.com.pe"><img src="https://cdn.teleticket.com.pe/images/logo-teleticket.png" alt="Teleticket" class="img-responsive"></a>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 login">
+                            <div class="collapse navbar-collapse menu-fix">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            <div id="body-content">
+                
+    
+    
+    <div class="interna container carro">
+    
+        <div class="title_interna">
+            
+                <div class="col-sm-12 p_lr">
+                    <img src="https://cdn.teleticket.com.pe/images/eventos/sal002_md.jpg" class="img-circle title_thumb hidden-xs" height="64" width="64">
+                    <h2>
+                        TINI TOUR 2022<span>EXPLANADA OLGUIN BY ARENA PERÚ</span>
+                                <span>lunes, 29 de agosto  20:00 hrs.</span>
+                    </h2>
+                </div>
+            
+            <div class="col-xs-12" id="steps">
+                <div class="col col-xs-3 ">
+                    <div class="borde">
+                        <a href="javascript:void(0);" class="step">1</a>
+                    </div>
+                        <span>Selección de Entradas</span>
+                </div>
+                <div class="col col-xs-3 ">
+                    <div class="borde">
+                        <a href="javascript:void(0);" class="step">2</a>
+                    </div>
+                    <span>Tipo de envío</span>
+                </div>
+                <div class="col col-xs-3 ">
+                    <div class="borde">
+                        <a href="javascript:void(0);" class="step">3</a>
+                    </div>
+                    <span>Datos de Compra</span>
+                </div>
+                <div class="col col-xs-3 active">
+                    <div class="borde">
+                        <a href="javascript:void(0);" class="step">4</a>
+                    </div>
+                    <span>Confirmación</span>
+                </div>
+                <div class="col-xs-12 bar hidden-xs"></div>
+            </div>
+        </div><!-- steps -->
+        <div class="clear"></div>
+    
+        
+    
+    
+    
+    <section>
+        <div class="data_user">
+            <h2>
+                JEAN CARLOS RAMOS HUAMANLAZO
+                    <span>
+                        TINI TOUR 2022
+                                <span>lunes, 29 de agosto  20:00 hrs.</span>
+                        <br>EXPLANADA OLGUIN BY ARENA PERÚ
+                    </span>
+            </h2>
+        </div>
+    </section>
+    <div id="divOrden" class="col-xs"></div>
+    <section class="table_orden location">
+        <div id="tabla-reserva">
+    <div class="buy_table">
+            <div class="col-xs-12 buy_row">
+                <div class="col-md-1 col-sm-2 col-xs-3 center">
+                    2
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-7 data">
+                        <div class="col-sm-9 col-xs-12 p_lr">
+                            PLATINUM MIENTEME
+                        </div>
+                    <div class="col-sm-3 col-xs-12 p_lr price">
+                        <strong>Precio:</strong>S/1,178.00
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-2 text_right">
+                </div>
+            </div>
+                <div class="col-xs-12 buy_row">
+                <div class="col-md-1 col-sm-2 col-xs-3 center">
+                    
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-7 data">
+                    <div class="col-sm-9 col-xs-12 p_lr">
+                        E-Ticket
+                    </div>
+                    <div class="col-sm-3 col-xs-12 p_lr price">
+                        <strong>Precio:</strong>S/0.00
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-2 text_right">
+                    
+                </div>
+            </div>
+                    <div class="col-xs-12 buy_row total">
+                <div class="col-xs-12">
+                    <div class="col-md-1 col-sm-2 col-xs-3 text_right">
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-7 data">
+                        <div class="col-sm-3 col-xs-12 p_lr">
+                            
+                        </div>
+                        <div class="col-sm-3 col-xs-12 p_lr" style="line-height: 1.4em; margin-bottom: 4px;">
+                        </div>
+                        <div class="col-sm-3 col-xs-12 p_lr" style="line-height: 1.4em; margin-bottom: 4px;">
+                        </div>
+                        <div class="col-sm-3 col-xs-12 p_lr price" style="line-height: 1.4em;">
+                            <strong>Total a Pagar:</strong>
+                            <h4 style="margin: 0; font-size: 1.6em">
+    S/1,178.00                        </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-2 text_right">
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+        </div>
+    </section>
+    <div id="mensaje-error" class="alert alert-danger" style="display: none;">
+        
+    </div>
+    
+    
+    
+    
+    <article id="pie-acciones" class="col-xs-12 accion">
+        <div class="col-sm-6 col-xs-12">
+            
+    
+        </div>
+        <div class="col-sm-6 col-xs-12" id="divPago">
+                <button id="btnConfirmar" type="button" class="btn btn-warning btn-width pull-right" data-ga-tracking="event, FlujoVenta, Click, BtnConfirmarPago-EventoID:SAL002-ClienteID:7119293">Confirmar Pago</button>
+        </div>
+    </article>
+    
+    
+    </div>
+    
+    
+    
+            </div>
+            <footer id="footer">
+                    <div class="container" role="contentinfo">
+                            <div class="col-sm-12 col-xs-12">
+                                <p>
+    
+                                    © TELETICKET. Marca registrada de Teledistribución S.A. Derechos Reservados 2010 -
+                                    <script>
+                                        var f2021 = new Date();
+                                        document.write(f2021.getFullYear());
+                                    </script>2022
+    
+                                    <br>
+                                    <a href="mailto:servicioalcliente@teleticket.com.pe">servicioalcliente@teleticket.com.pe</a> - <a href="https://teleticket.com.pe/paginas/condiciones" target="_blank">Términos y Condiciones</a>
+                                </p>
+                            </div>
+                    </div>
+            </footer>
+    
+        </div><!-- end canvas -->
+    
+        <div off-canvas="sb-1 right reveal off_canvas" class="off_canvas" style="">
+                <h4 style="margin-bottom: 0px !important;">Bienvenido</h4>
+            <h3>Menu</h3>
+            <ul class="menu_offcanvas">
+                    <li><a href="https://teleticket.com.pe">Home</a></li>
+                    <li><a href="https://teleticket.com.pe/cliente/micuenta">Mi cuenta</a></li>
+                    <li><a href="https://teleticket.com.pe/cliente/cambiocontrasena">Cambiar Contraseña</a></li>
+                    <li><a href="https://teleticket.com.pe/info/puntosventa">Puntos de Venta</a></li>
+                    <li><a href="https://teleticket.com.pe/account/signOut">Cerrar sesión</a></li>
+                    <li><a href="https://puntoticket.zendesk.com/hc/es/requests/new">Ayuda</a></li>
+            </ul>
+        </div>
+    
+        
+        
+        <div id="modal-fpay" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div></div>
+                        <iframe id="fpay-iframe" title="Fpay" referrerpolicy="same-origin" width="100%" height="300px" style="border: none;" sandbox="allow-popups allow-top-navigation allow-scripts allow-same-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+        <script src="https://cdnp.teleticket.com.pe/Content/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/jquery.bcSwipe.min.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/slidebars.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/jquery.autocomplete.min.js?v=20170120" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/jquery.screwdefaultbuttonsV2.min.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/readmore.min.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/jquery.placeholder.js" type="text/javascript"></script>
+        <script src="https://cdn.teleticket.com.pe/js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="https://cdn.teleticket.com.pe/js/jquery.form.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/customValidators.js?v=20210430" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/common.js?v=20170925" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/utils-1.10.js?v=20211106" type="text/javascript"></script>
+        <script src="https://cdn.teleticket.com.pe/js/jquery.fancybox-2.1.5.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/underscore-min.js" type="text/javascript"></script>
+        <script src="https://cdnp.teleticket.com.pe/Content/js/gaEventTracking.min.js?v=20170725" type="text/javascript"></script>
+        <script type="text/javascript">
+    
+    
+        </script>
+        
+        
+        <script src="https://cdn.puntoticket.com/js/vex.combined.min.js"></script>
+        <script>
+            (function (o, n, e, p, a, y) {
+                var s = n.createElement(p);
+                s.type = "text/javascript";
+                s.src = e;
+                s.onload = s.onreadystatechange = function () {
+                    if (!o && (!s.readyState
+                        || s.readyState === "loaded")) {
+                        y();
+                    }
+                };
+                var t = n.getElementsByTagName("script")[0];
+                p = t.parentNode;
+                p.insertBefore(s, t);
+            })(false, document, "https://unpkg.com/transbank-onepay-frontend-sdk@1/lib/merchant.onepay.min.js",
+                "script", window, function () {
+                    console.log("Onepay JS library successfully loaded.");
+                });
+        </script>
+        <script>
+    
+    
+            $(function () {
+    
+                function mostrarError(mensaje) {
+                    if (mensaje == "") {
+                        $("#mensaje-error").hide().html("");
+                    } else {
+                        $("#mensaje-error").show().html(mensaje);
+                    }
+                }
+    
+                function postearForm(accion, parametros) {
+                    var form = '<form id="formdone" action="' + accion + '" method="POST">';
+                    for (var i = 0; i < parametros.length; i++) {
+                        var obj = parametros[i];
+                        form += '<input type="hidden" name="' + obj.Key + '" value="' + obj.Value + '" />';
+                    }
+                    form += '</form>';
+                    $("body").append(form);
+                    $("#formdone").submit();
+                }
+    
+    
+                $('#btnConfirmar')
+                    .click(function () {
+                        if ($("#btnConfirmar").hasClass("submitted")) {
+                            return false;
+                        }
+                        $("#btnConfirmar").addClass("submitted");
+    
+                        var condicionesOpcionales = false;
+    
+                        $.ajax({
+                            type: "POST",
+                            url: "/Compra/CrearOrden",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: "{'chbCondicionesOpcionales': '" + condicionesOpcionales + "'}"
+                        })
+                            .done(function (data) {
+                                if (data.Accion != undefined && data.Accion == "onepay") {
+                                    Onepay.checkout({
+                                        endpoint: '/Pagos/OnePayCrear?ordenID=' + data.OrdenID,
+                                        commerceLogo: 'https://static.puntoticket.com/content/images/logo_puntoticket.png',
+                                        callbackUrl: '/Pagos/OnePayRetorno',
+                                        transactionDescription: 'Pago Entradas Punto Ticket Orden ' + data.OrdenID
+                                    });
+                                }
+                                else if (data.Parametros != undefined && data.Accion != undefined) {
+                                    postearForm(data.Accion, data.Parametros);
+                                } else if (data.Accion != undefined) {
+                                    if (data.MedioPago != undefined && data.MedioPago == "fpay") {
+                                        $("#fpay-iframe").attr("src", data.Accion);
+                                    } else {
+                                        window.location.href = data.Accion;
+                                    }
+                                } else if (data.Resultado != undefined) {
+                                    $(".table_orden").hide();
+                                    mostrarError("");
+                                    $("#pie-acciones").hide();
+                                    $('#divOrden').append(data.Resultado);
+                                } else {
+                                    if (data.MensajeError != undefined)
+                                        mostrarError(data.MensajeError);
+                                    if (data.TablaDetalleCompra != undefined && data.TablaDetalleCompra != null)
+                                        $('#tabla-reserva').html(data.TablaDetalleCompra);
+                                    $("#btnConfirmar").removeClass("submitted");
+                                }
+                            })
+                            .fail(function (jqXHR, textStatus, errorThrown) {
+                                mostrarError(textStatus);
+                                $("#btnConfirmar").removeClass("submitted");
+                            })
+                            .always(function () {
+                                console.log("post ejecutado");
+                            });
+                        return false;
+                    });
+            });
+    
+            $("#fpay-iframe").on("load", function (iframe) {
+                if (iframe.target.src !== "") {
+                    $('#modal-fpay').modal('show');
+                }
+            });
+        </script>
+    
+    
+    
+    
+        <script>
+            $(function () {
+                if (typeof gaEventTracking !== 'undefined') {
+                    gaEventTracking.init({
+                        inheritance: true
+                    });
+                }
+            });
+        </script>
+    
+        <script type="text/javascript">
+            $(function () {
+                var ptab = getCookie("_ptab");
+                if (typeof ptab !== 'undefined' && ptab === "1") {
+                    $("#menu-cuenta > .visita").hide();
+                    $("#menu-cuenta-mobile > .visita").hide();
+                    $("#menu-cuenta").show();
+                }
+                else {
+                    $("#menu-cuenta > .logeado").hide();
+                    $("#menu-cuenta-mobile > .logeado").hide();
+                    $("#menu-cuenta").show();
+                }
+    
+                if (typeof gaEventTracking !== 'undefined') {
+                    gaEventTracking.init({
+                        inheritance: true
+                    });
+                }
+            });
+        </script>
+    
+    
+    <iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
+    <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","379755359254374");fbq("set","agent","tmgoogletagmanager","379755359254374");fbq("track","PageView");</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=379755359254374&amp;ev=PageView&amp;noscript=1"></noscript>
+    
+    <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","379755359254374");fbq("set","agent","tmgoogletagmanager","379755359254374");fbq("track","PageView");fbq("track","AddPaymentInfo");</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=379755359254374&amp;ev=PageView&amp;noscript=1"></noscript>
+    </body>
+</html>
